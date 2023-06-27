@@ -4,7 +4,11 @@
     "sites": "Sites",
     "about": "About",
     "package": "Package",
-    "contact": "Contact"
+    "contact": "Contact",
+    "language": "Language"
   },
-  "home-description": ""
+  "home": {
+    "home-description": "Explore Nicaragua: where the unknown is found with adventure. Immerse yourself in a unique journey, guided by local experts who will show you the best secrets country guards. Are you ready to live an experience? unforgettable? Join ExplorAventura and unleash your exploring spirit",
+    "contact-use": "Contact us"
+  }
 }
