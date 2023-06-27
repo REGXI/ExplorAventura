@@ -1,5 +1,45 @@
+@font-face {
+  font-family: 'Merienda-Bold';
+  src: url('./assets/fonts/merienda/Merienda-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Merienda-Medium';
+  src: url('./assets/fonts/merienda/Merienda-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('./assets/fonts/montserrat//Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('./assets/fonts/montserrat//Montserrat-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('./assets/fonts/montserrat//Montserrat-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-light';
+  src: url('./assets/fonts/montserrat//Montserrat-light.ttf') format('truetype');
+  font-weight: 300;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat-Regular';
+  font-size: 14px;
 }
