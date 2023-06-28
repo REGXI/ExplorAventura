@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import Layout from '../../components/Layout'
 import { Home } from './components/Home'
+import { RecommendedSites } from './components/RecommendedSites'
 
 export default function HomePage() {
   const { t } = useTranslation()
@@ -10,7 +11,7 @@ export default function HomePage() {
         <Home {...{ t }} />
       </section>
       <section className="recommended-sites">
-        <h2>Recommended Sites</h2>
+        <RecommendedSites {...{ t }} />
       </section>
       <section className="services">
         <h2>Services</h2>

@@ -1,0 +1,44 @@
+$height-img: 35vh;
+
+.recommended-sites__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+  min-height: 70vh;
+
+  section {
+    display: grid;
+    gap: 1rem;
+
+    figure {
+      border-radius: 10px;
+      display: flex;
+      max-height: $height-img;
+
+      img {
+        border-radius: 10px;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    &:nth-child(1) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column: span 2;
+
+      figure:first-child {
+        grid-column: span 2;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+      figure {
+        max-height: calc(#{$height-img} * 2 + 1rem);
+        grid-row: span 2;
+      }
+    }
+  }
+}
