@@ -5,3 +5,19 @@
   min-height: 100vh;
   background-position-x: center;
 }
+
+/* scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
