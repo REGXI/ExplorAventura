@@ -1,0 +1,33 @@
+.testimonials {
+  min-height: 80vh;
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    margin-top: 5em;
+    .testimonials__item {
+      width: calc(100% / 3 - 1em);
+      min-width: 290px;
+      background: #fff;
+      border-radius: 10px;
+      height: 288px;
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      div {
+        margin-bottom: 1.5em;
+        i {
+          font-size: 5em;
+        }
+      }
+
+      h3 {
+        margin-top: auto;
+      }
+    }
+  }
+}

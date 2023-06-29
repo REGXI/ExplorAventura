@@ -3,6 +3,7 @@ import Layout from '../../components/Layout'
 import { Home } from './components/Home'
 import { RecommendedSites } from './components/RecommendedSites'
 import { Services } from './components/Services'
+import { Testimonials } from './components/Testimonials'
 
 export default function HomePage() {
   const { t } = useTranslation()
@@ -18,7 +19,7 @@ export default function HomePage() {
         <Services {...{ t }} />
       </section>
       <section className="testimonials">
-        <h2>Testimonials</h2>
+        <Testimonials {...{ t }} />
       </section>
     </Layout>
   )
