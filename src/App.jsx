@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import './App.css'
 
 import HomePage from './pages/home'
@@ -15,6 +16,8 @@ function App() {
         <Route path="/package" element={<div>package</div>} />
         <Route path="/contact" element={<div>Contact</div>} />
       </Routes>
+
+      <Footer />
     </div>
   )
 }
