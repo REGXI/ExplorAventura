@@ -12,9 +12,7 @@ export default function Footer() {
       <div className="footer-content">
         <section className="summary">
           <h3>ExplorAventura</h3>
-          <div>
-            <p>{t('footer.summary')}</p>
-          </div>
+          <p>{t('footer.summary')}</p>
 
           <div className="social">
             <a href="https://www.facebook.com/ExplorAventura-Travel-101501368925201">
