@@ -1,0 +1,40 @@
+.services {
+  background-image: url('../../../../assets/images/plane.webp');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    margin-top: 5em;
+
+    .services__item {
+      width: calc(100% / 4 - 1em);
+      min-width: 220px;
+      background: #fff;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      height: 265px;
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      div {
+        margin-bottom: 1.5em;
+
+        img {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+  }
+}
