@@ -36,6 +36,7 @@
       .language {
         cursor: pointer;
         color: $pri-color;
+
         i {
           margin-left: 0.5em;
         }
@@ -51,6 +52,13 @@
         }
       }
 
+      .language,
+      .navigation__language li {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
       .navigation__language {
         transition: all 0.3s ease-in-out;
         position: absolute;
