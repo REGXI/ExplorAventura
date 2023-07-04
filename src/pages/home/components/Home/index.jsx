@@ -7,28 +7,28 @@ export function Home({ t }) {
         <div className="galery-content">
           <figure>
             <img
-              src="https://via.placeholder.com/180x370"
+              src="https://via.placeholder.com/340x370"
               alt=""
               className="image-gallery__image"
             />
           </figure>
           <figure className="up">
             <img
-              src="https://via.placeholder.com/180x370"
+              src="https://via.placeholder.com/380x370"
               alt=""
               className="image-gallery__image"
             />
           </figure>
           <figure>
             <img
-              src="https://via.placeholder.com/180x370"
+              src="https://via.placeholder.com/380x370"
               alt=""
               className="image-gallery__image"
             />
           </figure>
           <figure className="up">
             <img
-              src="https://via.placeholder.com/180x370"
+              src="https://via.placeholder.com/380x370"
               alt=""
               className="image-gallery__image"
             />

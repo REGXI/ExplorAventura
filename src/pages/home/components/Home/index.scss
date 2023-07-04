@@ -2,32 +2,36 @@
 
 .home-content {
   width: 100%;
-  height: calc(100vh - #{$header-height} - 3em);
+  min-height: calc(100vh - #{$header-height} - 3em);
   display: flex;
   justify-content: center;
-  margin-top: 6em;
+  margin-top: calc(5em + #{$header-height});
 
   .image-galery {
     width: 60%;
     height: 100%;
+
     .galery-content {
-      height: 80%;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1em;
-      // responsive flex
+      height: 100%;
+      min-height: calc(85vh - #{$header-height} - 3em);
 
       figure {
         align-self: center;
         width: 100%;
+        height: 100%;
+
         img {
           object-fit: cover;
           width: 100%;
-          height: 70%;
+          height: 90%;
         }
       }
 
       .up {
-        align-self: flex-start;
+        margin-top: 5em;
       }
     }
   }
@@ -61,4 +65,110 @@
   text-decoration: none;
   color: #222;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 970px) {
+  .home-content {
+    .image-galery {
+      .galery-content {
+        figure {
+          height: 380px;
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .home-description {
+      padding-bottom: 3em;
+      h1 {
+        font-size: 4em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .home-content {
+    .image-galery {
+      .galery-content {
+        figure {
+          align-self: flex-start;
+
+          &:nth-child(2) {
+            margin-top: 3em;
+          }
+
+          &:nth-child(4) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .home-content {
+    flex-wrap: wrap;
+    margin-top: calc(2em + #{$header-height});
+
+    .image-galery,
+    .home-description {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      text-align: center;
+      padding: 0;
+
+      h1 {
+        font-size: 3em;
+        margin: 0 0 0.5em 0;
+      }
+    }
+
+    .image-galery {
+      margin-bottom: 3em;
+
+      .galery-content {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1em;
+
+        figure {
+          align-self: flex-start;
+          height: 300px;
+          width: 100%;
+
+          img {
+            height: 100%;
+          }
+
+          &:nth-child(4) {
+            display: block;
+            margin-top: 3em;
+          }
+        }
+
+        .up {
+          align-self: flex-start;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .home-description {
+      padding-bottom: 3em;
+
+      h2 {
+        font-size: 1.1em;
+      }
+    }
+  }
 }
