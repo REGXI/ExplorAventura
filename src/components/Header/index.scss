@@ -2,6 +2,12 @@
 
 .header {
   padding: $padding-desktop;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -65,6 +71,10 @@
       }
     }
   }
+}
+
+.header-container--hide {
+  transform: translateY(-100%);
 }
 
 @media only screen and (max-width: 1100px) {
