@@ -91,7 +91,6 @@
 
 @media only screen and (max-width: 1015px) {
   .navigation {
-    position: relative;
     width: 100%;
     .menu,
     .btn-close {
@@ -127,7 +126,7 @@
 
     .menu-container {
       position: absolute;
-      top: -2em;
+      top: calc(100% - 100vh);
       right: 0;
       height: 100vh;
       background: $pri-color;
@@ -163,6 +162,8 @@
           .navigation__language {
             background: #fff;
             top: 100%;
+            width: 100%;
+            text-align: center;
           }
         }
       }
