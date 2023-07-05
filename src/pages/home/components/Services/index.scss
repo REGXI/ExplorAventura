@@ -1,3 +1,5 @@
+@use '../../../../scss/index' as *;
+
 .services {
   background-image: url('../../../../assets/images/plane.webp');
   background-size: contain;
@@ -34,6 +36,22 @@
           object-fit: contain;
           margin-bottom: 1.5em;
         }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .services {
+    background-image: none;
+    background-color: #fff;
+
+    &__content {
+      .services__item {
+        width: 100%;
+        height: auto;
+        padding: 3em;
+        margin-bottom: 3em;
       }
     }
   }
