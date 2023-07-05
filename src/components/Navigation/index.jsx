@@ -19,31 +19,31 @@ export default function Navigation() {
       id: 1,
       name: 'navigation.home',
       path: '/',
-      delay: 1
+      delay: 0.5
     },
     {
       id: 2,
       name: 'navigation.sites',
       path: '/sites',
-      delay: 0.8
+      delay: 0.4
     },
     {
       id: 3,
       name: 'navigation.about',
       path: '/about',
-      delay: 0.6
+      delay: 0.3
     },
     {
       id: 4,
       name: 'navigation.package',
       path: '/package',
-      delay: 0.4
+      delay: 0.2
     },
     {
       id: 5,
       name: 'navigation.contact',
       path: '/contact',
-      delay: 0.2
+      delay: 0.1
     }
   ]
 
@@ -55,7 +55,7 @@ export default function Navigation() {
       transition: {
         ease: 'easeInOut',
         duration: 0.3,
-        delay: 1.2
+        delay: 0.8
       }
     }
   }
@@ -78,7 +78,7 @@ export default function Navigation() {
             variants={variantsItem}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: '100vh' }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             exit="exit"
           >
             <div className="btn-close" onClick={() => setIsMenuOpen(false)}>
