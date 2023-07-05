@@ -19,6 +19,7 @@
   .footer-content {
     padding: 3em 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     height: 100%;
     gap: 2em;
@@ -26,7 +27,7 @@
     section {
       display: flex;
       flex-direction: column;
-      width: calc(100% / 4 - 1em);
+      width: calc(100% / 4 - 4em);
 
       h3 {
         margin-bottom: 1.3em;
@@ -61,6 +62,7 @@
     }
 
     .contact {
+      margin-left: -3em;
       li {
         display: flex;
         align-items: center;
@@ -93,6 +95,83 @@
       text-decoration: none;
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .footer {
+    padding: 0 3em;
+  }
+
+  .quick-link {
+    width: auto !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer-content {
+    justify-content: space-around !important;
+
+    section {
+      margin: 0;
+    }
+
+    .quick-link,
+    .contact {
+      margin-left: -10em !important;
+    }
+  }
+  .executive {
+    width: 100% !important;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .contact {
+    margin-left: 0 !important;
+  }
+}
+
+@include mobile {
+  .footer {
+    padding: $padding-mobile;
+    .footer-content {
+      justify-content: flex-start !important;
+      section {
+        width: 100%;
+        margin-bottom: 2em;
+      }
+
+      .summary {
+        text-align: center;
+      }
+
+      .contact {
+        width: calc(100% / 2 - 1em);
+        margin: 0 !important;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+        }
+      }
+
+      .quick-link {
+        width: calc(60% / 2 - 1em);
+        margin: 0 !important;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+        }
+      }
+
+      .executive {
+        width: 100%;
+        gap: 1em;
       }
     }
   }
