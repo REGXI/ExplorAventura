@@ -1,3 +1,5 @@
+@use '../../../../scss/index' as *;
+
 .testimonials {
   min-height: 80vh;
   &__content {
@@ -27,6 +29,18 @@
 
       h3 {
         margin-top: auto;
+      }
+    }
+  }
+}
+@include mobile {
+  .testimonials {
+    background-color: #fff;
+    &__content {
+      .testimonials__item {
+        width: 100%;
+        height: auto;
+        padding: 3em;
       }
     }
   }
