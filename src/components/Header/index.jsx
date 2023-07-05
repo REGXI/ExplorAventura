@@ -7,12 +7,15 @@ import SocialMedia from '../SocialMedia'
 import './index.scss'
 
 export default function Header() {
+  // initial state
   const headerRef = useRef(null)
   let lastScrollTop = 0
 
   window.addEventListener('scroll', () => {
     const header = headerRef.current
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+    if (header === null) return
 
     if (scrollTop > lastScrollTop) {
       header.classList.add('header-container--hide')
