@@ -1,3 +1,5 @@
+@use '../../../../scss/index' as *;
+
 $height-img: 35vh;
 
 .recommended-sites__content {
@@ -25,6 +27,7 @@ $height-img: 35vh;
 
     &:nth-child(1) {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       grid-column: span 2;
 
       figure:first-child {
@@ -34,10 +37,24 @@ $height-img: 35vh;
 
     &:nth-child(2) {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
       figure {
         max-height: calc(#{$height-img} * 2 + 1rem);
         grid-row: span 2;
+      }
+    }
+
+    &:nth-child(3) {
+      @media only screen and (max-width: 725px) {
+        grid-column: span 3;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        figure {
+          max-height: calc(#{$height-img} * 2 + 1rem);
+          grid-row: span 2;
+        }
+      }
+
+      @media only screen and (max-width: 505px) {
+        grid-column: span 1;
       }
     }
   }
