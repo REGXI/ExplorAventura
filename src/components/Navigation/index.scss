@@ -8,6 +8,7 @@
   }
   .menu-container {
     width: 100% !important;
+    height: $header-height !important;
   }
   &__list {
     display: flex;
@@ -100,6 +101,9 @@
 @media only screen and (max-width: 1015px) {
   .navigation {
     width: 100%;
+    .menu-container {
+      height: 100vh !important;
+    }
     .menu,
     .btn-close {
       display: block;

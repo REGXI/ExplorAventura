@@ -5,8 +5,9 @@
   position: fixed;
   width: 100%;
   top: 0;
-  background: #fff;
+  z-index: 100;
   transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
 
   &__container {
     display: flex;
