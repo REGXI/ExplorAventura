@@ -49,12 +49,6 @@
           right: 44%;
           bottom: 20%;
 
-          @media ((min-height: 750px) and (min-width: 1015px)) {
-            height: 40%;
-            width: 20%;
-            bottom: 25%;
-          }
-
           &.zoom {
             width: 100%;
             height: 100%;
@@ -187,6 +181,28 @@
     }
   }
 }
+
+// @media ((max-height: 750px) and (max-width: 1015px)) {
+//   .container {
+//     .content {
+//       height: 60vh !important;
+//       .thumbnail-list {
+//         .wrapper {
+//           .thumbnail {
+//             height: 30% !important;
+//             width: 32% !important;
+//             right: 36% !important;
+//             &.zoom {
+//               height: 100% !important;
+//               width: 100% !important;
+//               right: 0 !important;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 @include mobile {
   .container {
