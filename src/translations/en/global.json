@@ -2,7 +2,8 @@
   "general": {
     "by": "by",
     "quick-link": "Quick Link",
-    "contact": "Contact"
+    "contact": "Contact",
+    "our": "our"
   },
   "navigation": {
     "home": "Home",
@@ -36,5 +37,20 @@
     "testimonials-item-description-1": "ExplorAventura exceeded all my expectations. From the stunning destinations to the friendly service and impeccable organization, my experience was truly unforgettable. I highly recommend this tour agency for unique and thrilling experiences.",
     "testimonials-item-description-2": "My trip with ExplorAventura was exceptional. Every detail was carefully planned and tailored to my preferences. The team provided personalized attention, ensuring I enjoyed memorable moments at every stage of my adventure.",
     "testimonials-item-description-3": "I'm grateful to ExplorAventura. I discovered breathtaking places and experienced thrilling adventures, thanks to their professionalism and exceptional service. Their dedication and passion for delivering unparalleled travel experiences make me recommend them wholeheartedly."
+  },
+  "about": {
+    "values": "Values",
+    "integrity": "Integrity",
+    "integrity-description": "Our first principal is honesty, which helps us meet the expectations we create.",
+    "passion": "Passion",
+    "passion-description": "Passion drive us to perform better, progress continually and deliver timely.",
+    "team-work": "Team Work",
+    "team-work-description": "Our team members are all about helping each other.",
+    "commitment": "Commitment",
+    "commitment-description": "Our commitment to our work and our clients is an unbreakable bond.",
+    "learning": "Learning",
+    "learning-description": "Our team is always learning something new to get better at what they do",
+    "goal-statement": "Goal Statement",
+    "goal-statement-description": "At ExplorAventura, we redefine tourism in Nicaragua. With unique experiences, exceptional service, and a focus on sustainability, we create unforgettable adventures. Let us be your guide as you discover the hidden gems, vibrant culture, and natural beauty of Nicaragua. Experience the extraordinary with ExplorAventura."
   }
 }
