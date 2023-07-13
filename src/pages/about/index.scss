@@ -1,0 +1,6 @@
+@use '../../scss/index' as *;
+
+.about-page {
+  margin-top: calc($header-height + 2rem);
+  padding: $padding-desktop;
+}

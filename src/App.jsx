@@ -5,6 +5,7 @@ import './App.css'
 
 import HomePage from './pages/home'
 import SitesPage from './pages/sites'
+import AboutPage from './pages/about'
 function App() {
   return (
     <div className="app">
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/sites" element={<SitesPage />} />
-        <Route path="/about" element={<div>about</div>} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/package" element={<div>package</div>} />
         <Route path="/contact" element={<div>Contact</div>} />
       </Routes>
