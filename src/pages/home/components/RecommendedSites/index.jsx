@@ -1,11 +1,11 @@
 import './index.scss'
 import LayoutPage from '../../../../components/LayuotPage'
-import Granada from '../../../../assets/images/granada.jpg'
-import Jinotega from '../../../../assets/images/jinotega.jpg'
-import Cornisland from '../../../../assets/images/cornisland.jpg'
-import Masaya from '../../../../assets/images/masaya.jpg'
-import Archipielagosolentiname from '../../../../assets/images/archipielagosolentiname.jpg'
-import Cerronegro from '../../../../assets/images/cerronegro.jpg'
+import Granada from '../../../../assets/images/granada.webp'
+import Jinotega from '../../../../assets/images/jinotega.webp'
+import Cornisland from '../../../../assets/images/cornisland.webp'
+import Masaya from '../../../../assets/images/masaya.webp'
+import Archipielagosolentiname from '../../../../assets/images/archipielagosolentiname.webp'
+import Cerronegro from '../../../../assets/images/cerronegro.webp'
 export function RecommendedSites({ t }) {
   return (
     <LayoutPage
@@ -18,13 +18,14 @@ export function RecommendedSites({ t }) {
       <div className="recommended-sites__content">
         <section>
           <figure className="recommended-sites__content-item">
-            <img src={Jinotega} alt="Jinotega - Nicaragua" />
+            <img loading="lazy" src={Jinotega} alt="Jinotega - Nicaragua" />
           </figure>
           <figure className="recommended-sites__content-item">
-            <img src={Masaya} alt="Masaya - Nicaragua" />
+            <img loading="lazy" src={Masaya} alt="Masaya - Nicaragua" />
           </figure>
           <figure className="recommended-sites__content-item">
             <img
+              loading="lazy"
               src={Archipielagosolentiname}
               alt="Archipiélago de Solentiname - Nicaragua"
             />
@@ -33,16 +34,24 @@ export function RecommendedSites({ t }) {
 
         <section>
           <figure className="recommended-sites__content-item">
-            <img src={Granada} alt="Granada - Nicaragua" />
+            <img loading="lazy" src={Granada} alt="Granada - Nicaragua" />
           </figure>
         </section>
 
         <section>
           <figure className="recommended-sites__content-item">
-            <img src={Cerronegro} alt="Cerro negro - Nicaragua" />
+            <img
+              loading="lazy"
+              src={Cerronegro}
+              alt="Cerro negro - Nicaragua"
+            />
           </figure>
           <figure className="recommended-sites__content-item">
-            <img src={Cornisland} alt="Corn Island - Nicaragua" />
+            <img
+              loading="lazy"
+              src={Cornisland}
+              alt="Corn Island - Nicaragua"
+            />
           </figure>
         </section>
       </div>

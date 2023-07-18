@@ -1,25 +1,45 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import Sanjuandelsur from '../../../../assets/images/sanjuandelsur.jpg'
-import Islaometepe from '../../../../assets/images/islaometepe.jpg'
-import Isletasgranada from '../../../../assets/images/isletasgranada.jpg'
-import Leon from '../../../../assets/images/leon.jpg'
+import Sanjuandelsur from '../../../../assets/images/sanjuandelsur.webp'
+import Islaometepe from '../../../../assets/images/islaometepe.webp'
+import Isletasgranada from '../../../../assets/images/isletasgranada.webp'
+import Leon from '../../../../assets/images/leon.webp'
 export function Home({ t }) {
   return (
     <div className="home-content">
       <section className="image-galery">
         <div className="galery-content">
           <figure>
-            <img src={Sanjuandelsur} alt="" className="image-gallery__image" />
+            <img
+              loading="lazy"
+              src={Sanjuandelsur}
+              alt=""
+              className="image-gallery__image"
+            />
           </figure>
           <figure className="up">
-            <img src={Islaometepe} alt="" className="image-gallery__image" />
+            <img
+              loading="lazy"
+              src={Islaometepe}
+              alt=""
+              className="image-gallery__image"
+            />
           </figure>
           <figure>
-            <img src={Isletasgranada} alt="" className="image-gallery__image" />
+            <img
+              loading="lazy"
+              src={Isletasgranada}
+              alt=""
+              className="image-gallery__image"
+            />
           </figure>
           <figure className="up">
-            <img src={Leon} alt="" className="image-gallery__image" />
+            <img
+              loading="lazy"
+              src={Leon}
+              alt=""
+              className="image-gallery__image"
+            />
           </figure>
         </div>
       </section>
