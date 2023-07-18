@@ -1,5 +1,11 @@
 import './index.scss'
 import LayoutPage from '../../../../components/LayuotPage'
+import Granada from '../../../../assets/images/granada.jpg'
+import Jinotega from '../../../../assets/images/jinotega.jpg'
+import Cornisland from '../../../../assets/images/cornisland.jpg'
+import Masaya from '../../../../assets/images/masaya.jpg'
+import Archipielagosolentiname from '../../../../assets/images/archipielagosolentiname.jpg'
+import Cerronegro from '../../../../assets/images/cerronegro.jpg'
 export function RecommendedSites({ t }) {
   return (
     <LayoutPage
@@ -12,28 +18,31 @@ export function RecommendedSites({ t }) {
       <div className="recommended-sites__content">
         <section>
           <figure className="recommended-sites__content-item">
-            <img src="https://via.placeholder.com/500" alt="" />
+            <img src={Jinotega} alt="Jinotega - Nicaragua" />
           </figure>
           <figure className="recommended-sites__content-item">
-            <img src="https://via.placeholder.com/500" alt="" />
+            <img src={Masaya} alt="Masaya - Nicaragua" />
           </figure>
           <figure className="recommended-sites__content-item">
-            <img src="https://via.placeholder.com/500" alt="" />
-          </figure>
-        </section>
-
-        <section>
-          <figure className="recommended-sites__content-item">
-            <img src="https://via.placeholder.com/500" alt="" />
+            <img
+              src={Archipielagosolentiname}
+              alt="Archipiélago de Solentiname - Nicaragua"
+            />
           </figure>
         </section>
 
         <section>
           <figure className="recommended-sites__content-item">
-            <img src="https://via.placeholder.com/500" alt="" />
+            <img src={Granada} alt="Granada - Nicaragua" />
+          </figure>
+        </section>
+
+        <section>
+          <figure className="recommended-sites__content-item">
+            <img src={Cerronegro} alt="Cerro negro - Nicaragua" />
           </figure>
           <figure className="recommended-sites__content-item">
-            <img src="https://via.placeholder.com/500" alt="" />
+            <img src={Cornisland} alt="Corn Island - Nicaragua" />
           </figure>
         </section>
       </div>

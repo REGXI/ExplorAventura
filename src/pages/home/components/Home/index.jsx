@@ -1,37 +1,25 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
+import Sanjuandelsur from '../../../../assets/images/sanjuandelsur.jpg'
+import Islaometepe from '../../../../assets/images/islaometepe.jpg'
+import Isletasgranada from '../../../../assets/images/isletasgranada.jpg'
+import Leon from '../../../../assets/images/leon.jpg'
 export function Home({ t }) {
   return (
     <div className="home-content">
       <section className="image-galery">
         <div className="galery-content">
           <figure>
-            <img
-              src="https://via.placeholder.com/340x370"
-              alt=""
-              className="image-gallery__image"
-            />
+            <img src={Sanjuandelsur} alt="" className="image-gallery__image" />
           </figure>
           <figure className="up">
-            <img
-              src="https://via.placeholder.com/380x370"
-              alt=""
-              className="image-gallery__image"
-            />
+            <img src={Islaometepe} alt="" className="image-gallery__image" />
           </figure>
           <figure>
-            <img
-              src="https://via.placeholder.com/380x370"
-              alt=""
-              className="image-gallery__image"
-            />
+            <img src={Isletasgranada} alt="" className="image-gallery__image" />
           </figure>
           <figure className="up">
-            <img
-              src="https://via.placeholder.com/380x370"
-              alt=""
-              className="image-gallery__image"
-            />
+            <img src={Leon} alt="" className="image-gallery__image" />
           </figure>
         </div>
       </section>
