@@ -7,7 +7,7 @@
   align-items: center;
   gap: 1em;
   .content-values {
-    padding: 3em 3em;
+    padding: 3em;
     background-color: $pri-color;
     width: 60%;
     height: 100%;
@@ -32,7 +32,7 @@
     background-size: 20px 22px;
     background-image: radial-gradient(
       circle,
-      rgb($pri-color, 0.4) 10%,
+      rgb($pri-color, 0.2) 10%,
       transparent 1%
     );
 
@@ -46,6 +46,49 @@
 
         margin-bottom: 1em;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1290px) {
+  .container-values {
+    justify-content: flex-start;
+    .content-values {
+      padding: 1em 1em;
+      width: 70%;
+    }
+    .goal-statement {
+      width: 30%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .container-values {
+    height: auto;
+    .content-values {
+      width: 55%;
+    }
+    .goal-statement {
+      width: 45%;
+      height: calc(100vh - $header-height - 2em);
+    }
+  }
+}
+
+@include mobile {
+  .container-values {
+    flex-direction: column;
+    height: auto;
+    .content-values {
+      width: 100%;
+      padding: 1em 1em;
+    }
+    .goal-statement {
+      width: 100%;
+      height: auto;
+      padding: 1em 0;
+      text-align: center;
     }
   }
 }

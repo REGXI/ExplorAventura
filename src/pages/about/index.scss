@@ -4,3 +4,15 @@
   margin-top: calc($header-height + 2rem);
   padding: $padding-desktop;
 }
+
+@media only screen and (max-width: 1100px) {
+  .about-page {
+    padding: 0 3em;
+  }
+}
+
+@include mobile {
+  .about-page {
+    padding: $padding-mobile;
+  }
+}

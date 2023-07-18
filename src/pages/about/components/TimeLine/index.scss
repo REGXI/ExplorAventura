@@ -26,3 +26,23 @@
     }
   }
 }
+
+@include mobile {
+  .timeline-content {
+    flex-direction: column;
+    .draw-timeline {
+      display: none;
+    }
+    .left-info,
+    .right-info {
+      width: 100%;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .left-info {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
