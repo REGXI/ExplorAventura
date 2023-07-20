@@ -5,6 +5,14 @@
     "contact": "Contact",
     "our": "our"
   },
+  "jacqueline": {
+    "title": "CO-OWNER / General Manager",
+    "summary": "Jacqueline is originally from Nicaragua and has always been passionate about her country. Jacqueline is a certified tour guide and has extensive experience in the field. He has worked with many international tour operators and has led tours throughout Nicaragua. Jacqueline is a dedicated professional who is committed to providing exceptional service and creating unforgettable experiences for her clients. She is passionate about sharing the beauty of Nicaragua with the world and is excited to be part of the ExplorAventura team."
+  },
+  "winston": {
+    "title": "CO-OWNER / Transportation Manager",
+    "summary": "Winston is a native of Nicaragua and has extensive experience in the tourism industry. He has worked with many international tour operators and has led tours throughout Nicaragua. Winston is a dedicated professional who is committed to providing exceptional service and creating unforgettable experiences for his clients. He is passionate about sharing the beauty of Nicaragua with the world and is excited to be part of the ExplorAventura team."
+  },
   "navigation": {
     "home": "Home",
     "sites": "Sites",
@@ -53,6 +61,7 @@
     "goal-statement": "Goal Statement",
     "goal-statement-description": "At ExplorAventura, we redefine tourism in Nicaragua. With unique experiences, exceptional service, and a focus on sustainability, we create unforgettable adventures. Let us be your guide as you discover the hidden gems, vibrant culture, and natural beauty of Nicaragua. Experience the extraordinary with ExplorAventura.",
     "timeline-title": "Journey",
-    "timeline-subject": "come join us in our journey to growth and betterment"
+    "timeline-subject": "come join us in our journey to growth and betterment",
+    "executive-title": "Executive"
   }
 }
