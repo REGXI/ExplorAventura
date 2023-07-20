@@ -1,9 +1,5 @@
 .app {
-  background-image: url('./assets/images/background-default.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 100vh;
-  background-position-x: center;
 }
 
 /* scroll */
