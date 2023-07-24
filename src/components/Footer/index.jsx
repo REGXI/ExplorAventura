@@ -1,6 +1,8 @@
 import './index.scss'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import Jacqueline from '../../assets/images/jacqueline.webp'
+import Winston from '../../assets/images/winston.webp'
 export default function Footer() {
   const { t } = useTranslation()
 
@@ -65,12 +67,12 @@ export default function Footer() {
           <div>
             <h3>Jacqueline Martinez</h3>
 
-            <img src="https://via.placeholder.com/200" alt="Jacqueline" />
+            <img src={Jacqueline} alt="Jacqueline" />
           </div>
           <div>
             <h3>Winston Castillo</h3>
 
-            <img src="https://via.placeholder.com/200" alt="Winston" />
+            <img src={Winston} alt="Winston" />
           </div>
         </section>
       </div>

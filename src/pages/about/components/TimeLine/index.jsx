@@ -31,7 +31,7 @@ export function TimeLine({ t }) {
           <div className="line"> </div>
           {/*  */}
           <IndicatorTimeLine />
-          <IndicatorTimeLine />
+          <IndicatorTimeLine colorless={true} />
           <IndicatorTimeLine />
           <IndicatorTimeLine />
           {/*  */}
