@@ -8,11 +8,13 @@ import './index.scss'
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const handleResize = () => {
     window.innerWidth < 1015 ? setIsMenuOpen(false) : setIsMenuOpen(true)
   }
+
+  const changeLanguage = (lng) => i18n.changeLanguage(lng)
 
   const NAVIGATION_ITEMS = [
     {
@@ -134,9 +136,9 @@ export default function Navigation() {
                   <i className="fa-solid fa-globe-americas" />
                 </span>
                 <ul className="navigation__language">
-                  <li>English</li>
-                  <li>Español</li>
-                  <li>Français</li>
+                  <li onClick={() => changeLanguage('en')}>English</li>
+                  <li onClick={() => changeLanguage('es')}>Español</li>
+                  <li onClick={() => changeLanguage('fr')}>Français</li>
                 </ul>
               </motion.div>
             </ul>

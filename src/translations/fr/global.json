@@ -1,3 +1,67 @@
 {
-  "home-description": ""
+  "general": {
+    "by": "par",
+    "quick-link": "Lien Rapide",
+    "contact": "Contact",
+    "our": "notre"
+  },
+  "jacqueline": {
+    "title": "CO-PROPRIÉTAIRE / Directrice Générale",
+    "summary": "Jacqueline est originaire du Nicaragua et a toujours été passionnée par son pays. Jacqueline est une guide touristique certifiée et possède une vaste expérience dans le domaine. Elle a travaillé avec de nombreux tour-opérateurs internationaux et a conduit des visites à travers tout le Nicaragua. Jacqueline est une professionnelle dévouée qui s'engage à fournir un service exceptionnel et à créer des expériences inoubliables pour ses clients. Elle est passionnée par le partage de la beauté du Nicaragua avec le monde et est ravie de faire partie de l'équipe ExplorAventura."
+  },
+  "winston": {
+    "title": "CO-PROPRIÉTAIRE / Responsable des Transports",
+    "summary": "Winston est originaire du Nicaragua et possède une vaste expérience dans l'industrie du tourisme. Il a travaillé avec de nombreux tour-opérateurs internationaux et a conduit des visites à travers tout le Nicaragua. Winston est un professionnel dévoué qui s'engage à fournir un service exceptionnel et à créer des expériences inoubliables pour ses clients. Il est passionné par le partage de la beauté du Nicaragua avec le monde et est ravi de faire partie de l'équipe ExplorAventura."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "sites": "Sites",
+    "about": "À Propos",
+    "package": "Forfait",
+    "contact": "Contact",
+    "language": "Langue"
+  },
+  "footer": {
+    "all-rights-reserved": "Tous droits réservés",
+    "summary": "Découvrez le Nicaragua avec nous et vivez des expériences inoubliables dans des paysages impressionnants."
+  },
+  "home": {
+    "home-description": "Explorez le Nicaragua : là où l'inconnu est découvert avec l'aventure. Plongez-vous dans un voyage unique, guidé par des experts locaux qui vous montreront les meilleurs secrets que le pays cache. Êtes-vous prêt à vivre une expérience inoubliable ? Rejoignez ExplorAventura et libérez votre esprit d'exploration.",
+    "contact-use": "Contactez-nous",
+    "sites-recomended-title": "Villes à ne pas manquer",
+    "sites-recomended-subject": "Découvrez les villes incroyables de notre beau pays",
+    "services-title": "Parcourez tout le Nicaragua",
+    "services-subject": "Trouvez le forfait parfait pour l'aventure",
+    "services-item-bus": "Transport",
+    "services-item-bus-description": "Notre agence de tourisme offre un transport fiable, confortable et sans faille pour une expérience de voyage exceptionnelle.",
+    "services-item-camera": "Service Client",
+    "services-item-camera-description": "Nous offrons un service personnalisé pour répondre aux besoins individuels de chaque client et garantir un excellent service.",
+    "services-item-plane": "Confirmation Instantanée",
+    "services-item-plane-description": "Notre service de confirmation instantanée fournit des réponses immédiates et sans faille, offrant tranquillité d'esprit et efficacité à nos précieux clients en tout temps.",
+    "services-item-location": "Hébergement",
+    "services-item-location-description": "Notre agence propose un hébergement luxueux et une délicieuse cuisine dans des destinations extraordinaires pour un séjour confortable et agréable pendant vos voyages.",
+    "testimonials-title": "Témoignages",
+    "testimonials-subject": "Ce que disent nos clients à notre sujet",
+    "testimonials-item-description-1": "ExplorAventura a dépassé toutes mes attentes. Des destinations époustouflantes au service amical et à l'organisation impeccable, mon expérience a été vraiment inoubliable. Je recommande vivement cette agence de voyage pour des expériences uniques et passionnantes.",
+    "testimonials-item-description-2": "Mon voyage avec ExplorAventura a été exceptionnel. Chaque détail a été soigneusement planifié et adapté à mes préférences. L'équipe a offert une attention personnalisée, en veillant à ce que je profite de moments mémorables à chaque étape de mon aventure.",
+    "testimonials-item-description-3": "Je suis reconnaissant envers ExplorAventura. J'ai découvert des endroits à couper le souffle et vécu des aventures palpitantes grâce à leur professionnalisme et à leur service exceptionnel. Leur dévouement et leur passion pour offrir des expériences de voyage inégalées me poussent à les recommander chaleureusement."
+  },
+  "about": {
+    "values": "Valeurs",
+    "integrity": "Intégrité",
+    "integrity-description": "Notre premier principe est l'honnêteté, qui nous aide à répondre aux attentes que nous créons.",
+    "passion": "Passion",
+    "passion-description": "La passion nous pousse à nous surpasser, à progresser continuellement et à livrer dans les délais.",
+    "team-work": "Travail d'Équipe",
+    "team-work-description": "Les membres de notre équipe sont tous prêts à s'entraider.",
+    "commitment": "Engagement",
+    "commitment-description": "Notre engagement envers notre travail et nos clients est indéfectible.",
+    "learning": "Apprentissage",
+    "learning-description": "Notre équipe apprend constamment quelque chose de nouveau pour s'améliorer dans ce qu'elle fait.",
+    "goal-statement": "Déclaration de Mission",
+    "goal-statement-description": "Chez ExplorAventura, nous redéfinissons le tourisme au Nicaragua. Avec des expériences uniques, un service exceptionnel et une attention portée à la durabilité, nous créons des aventures inoubliables. Laissez-nous être votre guide alors que vous découvrez les joyaux cachés, la culture vibrante et la beauté naturelle du Nicaragua. Vivez l'extraordinaire avec ExplorAventura.",
+    "timeline-title": "Parcours",
+    "timeline-subject": "Venez nous rejoindre dans notre parcours vers la croissance et l'amélioration",
+    "executive-title": "Cadre"
+  }
 }
