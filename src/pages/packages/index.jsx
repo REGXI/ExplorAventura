@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { SearchPlaces } from './components/SearchPlace'
 import { getAllPlaces, getPlacesByDestination } from '../../services/getPlaces'
 import { RenderPlaces } from './components/RenderPlaces'
+import { FocusedItemPlace } from './components/FocusedItemPlace'
 export default function PackagesPage() {
   const { t } = useTranslation()
   const [places, setPlaces] = useState(getAllPlaces())
@@ -21,6 +22,10 @@ export default function PackagesPage() {
         <div className="title">
           <h1>Buy Vacation Packages at the Best Prices</h1>
           <p>Explore Best Selling Package</p>
+
+          <button>
+            <span>Contact with Agent</span>
+          </button>
         </div>
 
         <div className="search-package">
@@ -36,18 +41,7 @@ export default function PackagesPage() {
         </div>
       </section>
       <section className="package-container">
-        <div className="image-place">
-          <img src={focusedPlace?.image} alt="Place ExplorAventura" />
-        </div>
-
-        <div className="information-place">
-          <div className="title-place">
-            <h3>{focusedPlace?.name}</h3>
-            <p>{focusedPlace?.description}</p>
-          </div>
-
-          <div className="options-package"></div>
-        </div>
+        <FocusedItemPlace focusedPlace={focusedPlace} />
       </section>
     </div>
   )

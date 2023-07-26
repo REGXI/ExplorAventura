@@ -18,6 +18,25 @@
     gap: 2em;
 
     .title {
+      button {
+        padding: 0.8em 1em;
+        margin: 1em 0;
+        background-color: $pri-color;
+        outline: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+          background-color: darken($pri-color, 10%);
+        }
+
+        &:active {
+          background-color: darken($pri-color, 20%);
+        }
+      }
+
       h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
