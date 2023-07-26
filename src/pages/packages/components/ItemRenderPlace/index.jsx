@@ -7,12 +7,10 @@ export function ItemRenderPlace({ image, name }) {
         <img src={image} alt="imagen place" />
       </div>
       <div className="name-place">
-        <h2>{name}</h2>
+        <span>{name}</span>
       </div>
 
-      <div className="options-place">
-        <button>Custome</button>
-      </div>
+      <div className="options-place">{/* <button>Custome</button> */}</div>
     </div>
   )
 }
