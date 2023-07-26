@@ -1,6 +1,10 @@
 import { optionsPlaces, durationOptions } from '../../../../data/allOptionPlace'
 import { useForm } from '../../../../hooks/useForm'
-import { getPlacesByDestination } from '../../../../services/getPlaces'
+import {
+  getPlacesByDestination,
+  getAllPlaces
+} from '../../../../services/getPlaces'
+import './index.scss'
 export function SearchPlaces({ setPlaces }) {
   const initialValues = {
     destination: 'all',
@@ -15,7 +19,10 @@ export function SearchPlaces({ setPlaces }) {
   const handleSubmit = (event) => {
     event.preventDefault()
     const { destination } = values
-    setPlaces(getPlacesByDestination(destination))
+
+    destination === 'all'
+      ? setPlaces(getAllPlaces())
+      : setPlaces(getPlacesByDestination(destination))
   }
 
   return (
@@ -77,7 +84,9 @@ export function SearchPlaces({ setPlaces }) {
       </div>
 
       <div className="button">
-        <button type="submit">Search</button>
+        <button type="submit">
+          <i className="fas fa-search"></i>
+        </button>
       </div>
     </form>
   )
