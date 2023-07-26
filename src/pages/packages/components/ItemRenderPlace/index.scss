@@ -12,7 +12,18 @@
     width: 170px;
     height: 230px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 13px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      filter: brightness(0.8);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
 
     img {
       width: 100%;
