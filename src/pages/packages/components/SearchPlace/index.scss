@@ -45,3 +45,30 @@
     margin: -1em -1em -1em 0;
   }
 }
+
+@include mobile {
+  .seach-place {
+    width: 100%;
+    flex-direction: column;
+    margin: 1em 0;
+    div {
+      select,
+      input {
+        padding: 1em;
+      }
+
+      button {
+        width: 100%;
+        border-radius: 10px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .button {
+      margin: 0;
+    }
+  }
+}

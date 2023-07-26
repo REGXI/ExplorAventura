@@ -77,3 +77,50 @@
     }
   }
 }
+
+@include mobile {
+  .packages-page {
+    flex-direction: column;
+    padding: $padding-mobile;
+
+    .information-package {
+      width: 100%;
+      padding-top: calc($header-height + 1em);
+      gap: 1em;
+
+      .title {
+        text-align: center;
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .package-container {
+      width: 100%;
+      height: 60vh;
+
+      .image-place {
+        &::before {
+          background: none;
+        }
+      }
+
+      .information-place {
+        height: 40%;
+        padding: 1em;
+
+        .title-place {
+          h3 {
+            margin-bottom: 1em;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
