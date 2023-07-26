@@ -1,4 +1,6 @@
 import { ItemRenderPlace } from '../ItemRenderPlace'
+import Carousel from '../../../../components/Carousel'
+import './index.scss'
 export function RenderPlaces({ places, t }) {
   console.log(places)
 
@@ -9,15 +11,7 @@ export function RenderPlaces({ places, t }) {
       </div>
 
       <div className="places">
-        {places?.map((item, index) => {
-          return (
-            <ItemRenderPlace
-              key={index}
-              image={item.image}
-              name={t(item.name)}
-            />
-          )
-        })}
+        <Carousel arrayCarousel={places} RenderComponent={ItemRenderPlace} />
       </div>
     </>
   )
