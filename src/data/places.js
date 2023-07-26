@@ -1,3 +1,14 @@
+import granada_isletas_granada from '../assets/images/granada_isletas_granada.jfif'
+import granada_parque_central from '../assets/images/granada_parque_central.jpg'
+import granada_mirador_merced from '../assets/images/granada_mirador_merced.jpg'
+import granada_fortaleza_polvora from '../assets/images/granada_fortaleza_polvora.jpg'
+
+import rivas_isla_de_ometepe from '../assets/images/rivas_isla_de_ometepe.jpg'
+import rivas_playa_gigante from '../assets/images/rivas_playa_gigante.jpg'
+import rivas_san_juan_del_sur from '../assets/images/rivas_san_juan_del_sur.jpg'
+import rivas_reserva_indio_maiz from '../assets/images/rivas_reserva_indio_maiz.jfif'
+import rivas_los_guatuzos from '../assets/images/rivas_los_guatuzo.jfif'
+
 export const places = [
   {
     destination: 'leon',
@@ -72,31 +83,25 @@ export const places = [
     places: [
       {
         name: 'Isletas de Granada',
-        image: 'https://placehold.co/600x400.png',
+        image: granada_isletas_granada,
         description:
           'Un paseo en bote por las Isletas de Granada es una experiencia imperdible. Estas pequeñas islas en el Lago Nicaragua están llenas de exuberante vegetación y vida silvestre. Puedes disfrutar de un tranquilo paseo en bote o incluso tomar un baño en el lago.'
       },
       {
-        name: 'Museo de Chocolate:',
-        image: 'https://placehold.co/600x400.png',
-        description:
-          'Para los amantes del chocolate, este museo es un lugar fascinante para aprender sobre el proceso de fabricación del chocolate, su historia y disfrutar de degustaciones.'
-      },
-      {
         name: 'Parque Central de Granada',
-        image: 'https://placehold.co/600x400.png',
+        image: granada_parque_central,
         description:
           'El corazón de la ciudad, este encantador parque es el lugar perfecto para disfrutar del ambiente local, relajarse y admirar la arquitectura colonial que lo rodea. Es un lugar popular para sentarse y disfrutar de la vida cotidiana de la ciudad.'
       },
       {
         name: 'Mirador de La Merced',
-        image: 'https://placehold.co/600x400.png',
+        image: granada_mirador_merced,
         description:
           'Ubicado en el campanario de la Iglesia de La Merced, este mirador ofrece vistas panorámicas impresionantes de la ciudad, el Lago Nicaragua y el Volcán Mombacho. Es un lugar popular para tomar fotografías y disfrutar de las vistas.'
       },
       {
         name: 'Fortaleza La Pólvora',
-        image: 'https://placehold.co/600x400.png',
+        image: granada_fortaleza_polvora,
         description:
           'Esta antigua fortaleza es un sitio histórico que data del siglo XVIII y ofrece una vista panorámica de la ciudad desde su mirador. Es un lugar interesante para aprender sobre la historia militar de Granada.'
       }
@@ -107,31 +112,31 @@ export const places = [
     places: [
       {
         name: 'Isla de Ometepe',
-        image: 'https://placehold.co/600x400.png',
+        image: rivas_isla_de_ometepe,
         description:
           'Esta isla es una joya natural en el Lago de Nicaragua y es famosa por sus dos volcanes gemelos, Concepción y Maderas. Los visitantes pueden disfrutar de actividades como senderismo, observación de vida silvestre y visitas a comunidades locales.'
       },
       {
         name: 'Playa Gigante',
-        image: 'https://placehold.co/600x400.png',
+        image: rivas_playa_gigante,
         description:
           'Una playa hermosa y relajante que atrae a surfistas y turistas que buscan tranquilidad y bellos paisajes. Es un lugar ideal para practicar surf, tomar el sol o disfrutar de paseos en bote.'
       },
       {
         name: 'San Juan del Sur',
-        image: 'https://placehold.co/600x400.png',
+        image: rivas_san_juan_del_sur,
         description:
           'A unos 20 kilómetros de Rivas, esta pintoresca ciudad costera es famosa por sus playas, su animada vida nocturna y su ambiente relajado. Es un destino popular para los surfistas y los amantes de la playa.'
       },
       {
         name: 'Reserva Biológica Indio-Maíz',
-        image: 'https://placehold.co/600x400.png',
+        image: rivas_reserva_indio_maiz,
         description:
           'Ubicada en la región de Rivas, esta reserva natural es una de las áreas de selva tropical más grandes y mejor conservadas de Nicaragua. Ofrece una gran biodiversidad y es un lugar ideal para los amantes de la naturaleza y la observación de aves.'
       },
       {
         name: 'Reserva Natural Los Guatuzos',
-        image: 'https://placehold.co/600x400.png',
+        image: rivas_los_guatuzos,
         description:
           'Otra reserva natural en la región de Rivas, Los Guatuzos ofrece la oportunidad de explorar los humedales y los canales del Río San Juan, y es un lugar ideal para avistamiento de vida silvestre.'
       }
