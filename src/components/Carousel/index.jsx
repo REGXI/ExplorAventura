@@ -7,7 +7,11 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 
-export default function Carousel({ arrayCarousel, RenderComponent }) {
+export default function Carousel({
+  arrayCarousel,
+  RenderComponent,
+  onClickedItem
+}) {
   const renderNoItem = () => <div>No hay items</div>
 
   if (!arrayCarousel?.length) return renderNoItem()
@@ -21,10 +25,14 @@ export default function Carousel({ arrayCarousel, RenderComponent }) {
       pagination={{ clickable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
+      style={{
+        padding: '1em',
+        width: '100%'
+      }}
     >
       {arrayCarousel?.map((item, index) => (
         <SwiperSlide key={index}>
-          <RenderComponent {...item} />
+          <RenderComponent {...item} onClick={() => onClickedItem(item)} />
         </SwiperSlide>
       ))}
     </Swiper>
