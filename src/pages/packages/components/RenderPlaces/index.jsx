@@ -1,9 +1,7 @@
 import { ItemRenderPlace } from '../ItemRenderPlace'
 import Carousel from '../../../../components/Carousel'
 import './index.scss'
-export function RenderPlaces({ places, t }) {
-  console.log(places)
-
+export function RenderPlaces({ places, t, handleClickedPlace }) {
   return (
     <>
       <div className="title-related-places">
@@ -11,7 +9,11 @@ export function RenderPlaces({ places, t }) {
       </div>
 
       <div className="places">
-        <Carousel arrayCarousel={places} RenderComponent={ItemRenderPlace} />
+        <Carousel
+          arrayCarousel={places}
+          RenderComponent={ItemRenderPlace}
+          onClickedItem={handleClickedPlace}
+        />
       </div>
     </>
   )

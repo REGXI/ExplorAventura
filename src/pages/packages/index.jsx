@@ -7,9 +7,13 @@ import { RenderPlaces } from './components/RenderPlaces'
 export default function PackagesPage() {
   const { t } = useTranslation()
   const [places, setPlaces] = useState(getAllPlaces())
-  const [imagenPlace, setImagenPlace] = useState(
-    'https://placehold.co/600x400.png'
-  )
+  const [focusedPlace, setFocusedPlace] = useState({})
+
+  const handleClickedPlace = (place) => setFocusedPlace({ ...place })
+
+  useEffect(() => {
+    setFocusedPlace(places[0])
+  }, [places])
 
   return (
     <div className="packages-page">
@@ -24,16 +28,23 @@ export default function PackagesPage() {
         </div>
 
         <div className="related-places">
-          <RenderPlaces places={places} t={t} />
+          <RenderPlaces
+            places={places}
+            t={t}
+            handleClickedPlace={handleClickedPlace}
+          />
         </div>
       </section>
       <section className="package-container">
         <div className="image-place">
-          <img src={imagenPlace} alt="imagen place" />
+          <img src={focusedPlace?.image} alt="Place ExplorAventura" />
         </div>
 
         <div className="information-place">
-          <div className="title-place"></div>
+          <div className="title-place">
+            <h3>{focusedPlace?.name}</h3>
+            <p>{focusedPlace?.description}</p>
+          </div>
 
           <div className="options-package"></div>
         </div>
