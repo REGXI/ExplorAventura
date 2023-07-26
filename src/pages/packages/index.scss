@@ -1,6 +1,52 @@
+@use '../../scss/index' as *;
 .packages-page {
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: $padding-desktop;
+  margin-bottom: 5em;
+  gap: 1em;
+
+  .information-package {
+    width: 50%;
+    padding-top: calc($header-height + 3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .title {
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .related-places {
+    width: 100%;
+  }
+
+  .package-container {
+    height: 100vh;
+    width: 50%;
+    align-self: flex-start;
+    z-index: -1;
+
+    .image-place {
+      height: 100%;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
