@@ -1,13 +1,15 @@
 @use '../../scss/index' as *;
 .packages-page {
   min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: $padding-desktop;
-  margin-bottom: 5em;
-  gap: 1em;
 
+  .package {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5em;
+    gap: 1em;
+  }
   .information-package {
     width: 50%;
     min-height: 100vh;
@@ -99,8 +101,11 @@
 
 @include mobile {
   .packages-page {
-    flex-direction: column;
     padding: $padding-mobile;
+
+    section:first-child {
+      flex-direction: column;
+    }
 
     .information-package {
       width: 100%;
