@@ -20,6 +20,10 @@ export function CustomPackage({ randomDestination }) {
             </div>
           </div>
         </div>
+
+        <button>
+          <span>To Order Tour</span>
+        </button>
       </section>
 
       <section className="packages__contact">
