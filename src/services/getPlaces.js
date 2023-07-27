@@ -15,3 +15,19 @@ export const getPlaceByName = (name) => {
 }
 
 export const getAllPlaces = () => places.map((place) => place.places).flat()
+
+export const getRamdonDestinations = () => {
+  const destination = places.filter((place) => place.places.length > 0)
+  const randomDestination =
+    destination[Math.floor(Math.random() * destination.length)]
+
+  const randomPlace =
+    randomDestination.places[
+      Math.floor(Math.random() * randomDestination.places.length)
+    ]
+
+  return {
+    destination: randomDestination.destination,
+    place: randomPlace
+  }
+}
