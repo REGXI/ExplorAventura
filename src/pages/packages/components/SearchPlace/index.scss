@@ -46,6 +46,18 @@
   }
 }
 
+@media only screen and (max-width: 950px) {
+  .seach-place {
+    width: 150%;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .seach-place {
+    width: 100%;
+  }
+}
+
 @include mobile {
   .seach-place {
     width: 100%;

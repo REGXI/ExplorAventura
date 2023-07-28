@@ -2,7 +2,7 @@
 $width: 80%;
 
 .custome-packages__container {
-  min-height: 60vh;
+  min-height: 75vh;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -18,7 +18,7 @@ $width: 80%;
 
     .pacakges__content_title {
       h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
         margin-bottom: 1rem;
       }
@@ -28,7 +28,7 @@ $width: 80%;
     .pacakges__content_img {
       width: 100%;
       position: relative;
-      height: 60vh;
+      height: 75vh;
 
       img {
         width: 100%;
@@ -79,7 +79,7 @@ $width: 80%;
   .packages__contact {
     display: flex;
     width: 20%;
-    height: 60vh;
+    height: 75vh;
     justify-content: space-around;
     flex-direction: column;
     text-align: end;
@@ -116,6 +116,18 @@ $width: 80%;
         font-weight: 600;
         color: $pri-color;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .custome-packages__container {
+    .custom-packages__content {
+      width: 70%;
+    }
+
+    .packages__contact {
+      width: 30%;
     }
   }
 }
