@@ -1,12 +1,59 @@
+@use '../../../../scss/index' as *;
 .contact-form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5em;
+
   .box {
     width: calc(50% - 1em);
     display: flex;
     flex-direction: column;
+    gap: 1em;
+
+    label {
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input,
+    textarea,
+    select {
+      border: none;
+      padding: 1em 2em;
+      background-color: #f5f5f5;
+    }
+
+    select {
+      outline: none;
+      appearance: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 10em;
+    }
+
+    button {
+      background-color: #222;
+      color: #fff;
+      padding: 1em 0;
+      outline: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #333;
+      }
+
+      &:active {
+        background-color: #444;
+      }
+
+      i {
+        margin-left: 1em;
+      }
+    }
   }
 
   .submit,
@@ -15,6 +62,18 @@
     button {
       width: 30%;
       margin-top: 1em;
+    }
+  }
+}
+
+@include mobile {
+  .contact-form {
+    .box {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
     }
   }
 }
