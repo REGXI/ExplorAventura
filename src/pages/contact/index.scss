@@ -1,0 +1,34 @@
+@use '../../scss/index' as *;
+
+.contact_page {
+  margin-top: calc($header_height + 2rem);
+  min-height: 100vh;
+
+  .contact-container {
+    width: 750px;
+    margin: auto;
+    .title {
+      width: 100%;
+      margin-bottom: 3em;
+      h1 {
+        font-size: 1.8em;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .contact_page {
+    margin-bottom: 3em;
+    .contact-container {
+      width: 100%;
+      padding: 0 1em;
+      .title {
+        h1 {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
