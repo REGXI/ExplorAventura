@@ -3,25 +3,26 @@
 .services {
   background-image: url('../../../../assets/images/plane.webp');
   background-size: contain;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 80vh;
+  @include padding-control;
 
   &__content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1em;
+    gap: 3em;
     margin-top: 5em;
 
     .services__item {
-      width: calc(100% / 4 - 1em);
+      width: calc(100% / 4 - 4em);
       min-width: 220px;
       background: #fff;
-      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+      @include box-shadow;
       border-radius: 10px;
-      height: 265px;
+      height: 300px;
       padding: 1em;
       display: flex;
       flex-direction: column;

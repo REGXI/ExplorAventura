@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   margin-top: calc(5em + #{$header-height});
+  @include padding-control;
 
   .image-galery {
     width: 60%;

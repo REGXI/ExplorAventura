@@ -35,7 +35,6 @@ const SERVICES_ITEM = [
 export function Services({ t }) {
   return (
     <LayoutPage
-      className="services"
       title="home.services-title"
       subject="home.services-subject"
       titleColor="primary"
