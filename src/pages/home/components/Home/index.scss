@@ -2,68 +2,39 @@
 
 .home-content {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  margin-top: calc(5em + #{$header-height});
   @include padding-control;
 
   .image-galery {
-    width: 60%;
-    height: 100%;
+    width: 55%;
 
     .galery-content {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1em;
-      height: 100%;
-      min-height: calc(90vh - 5em - #{$header-height});
-
-      @media only screen and (min-height: 700px) {
-        min-height: 600px;
-      }
-
-      @media only screen and (min-height: 1000px) {
-        min-height: 800px;
-      }
-
+      margin-left: -4em;
       figure {
-        align-self: center;
-        width: 100%;
-        height: 100%;
-
         img {
           object-fit: cover;
           width: 100%;
-          height: 90%;
-          image-rendering: pixelated;
+          height: 100vh;
+          max-height: 700px;
         }
-      }
-
-      .up {
-        margin-top: 5em;
       }
     }
   }
 
   .home-description {
-    width: 40%;
+    width: 45%;
     text-align: end;
     padding-left: 2em;
-    margin-top: 4em;
+    margin-top: calc(5em + #{$header-height});
     h1 {
-      font-family: 'Merienda-Bold';
-      font-size: 5em;
-      color: $pri-color;
-      margin-left: -3em;
-    }
-
-    h2 {
-      color: #9a5626;
-      font-size: 1.4em;
+      font-size: 3.5em;
+      display: block;
     }
 
     p {
-      margin: 1em 0 2em 0;
+      margin: 3em 0;
     }
   }
 }
@@ -76,110 +47,69 @@
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 970px) {
+.home-search {
+  margin-left: -70% !important;
+  width: 170% !important;
+}
+
+@media only screen and (max-width: 1180px) {
   .home-content {
     .image-galery {
-      .galery-content {
-        figure {
-          height: 380px;
-          img {
-            height: 100%;
-          }
-        }
-      }
+      width: 65%;
     }
 
     .home-description {
-      padding-bottom: 3em;
-      h1 {
-        font-size: 4em;
-      }
-      h2 {
-        font-size: 1.2em;
-      }
+      width: 45%;
     }
   }
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1015px) {
   .home-content {
     .image-galery {
+      width: 50%;
+    }
+
+    .home-description {
+      width: 50%;
+    }
+  }
+}
+
+@include mobile {
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+    .image-galery {
+      width: 100%;
       .galery-content {
-        grid-template-columns: repeat(3, 1fr);
-
+        margin: 0 -1em;
         figure {
-          align-self: flex-start;
-
-          &:nth-child(2) {
-            margin-top: 3em;
-          }
-
-          &:nth-child(4) {
-            display: none;
+          img {
+            height: 50vh;
           }
         }
       }
     }
-  }
-}
 
-@include mobile() {
-  .home-content {
-    flex-wrap: wrap;
-    margin-top: calc(2em + #{$header-height});
-
-    .image-galery,
     .home-description {
       width: 100%;
-      height: auto;
-      margin: 0;
       text-align: center;
-      padding: 0;
-
+      padding-left: 0;
+      margin-top: 2em;
       h1 {
-        font-size: 3em;
-        margin: 0 0 0.5em 0;
+        font-size: 2em;
       }
-    }
-
-    .image-galery {
-      margin-bottom: 3em;
-
-      .galery-content {
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 1em;
-
-        figure {
-          align-self: flex-start;
-          height: 300px;
-          width: 100%;
-
-          img {
-            height: 100%;
-          }
-
-          &:nth-child(4) {
-            display: block;
-            margin-top: 3em;
-          }
-        }
-
-        .up {
-          align-self: flex-start;
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    .home-description {
-      padding-bottom: 3em;
 
       h2 {
-        font-size: 1.1em;
+        font-size: 1em;
       }
     }
+  }
+
+  .home-search {
+    margin-left: 0 !important;
+    width: 100% !important;
+    text-align: start;
   }
 }

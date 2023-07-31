@@ -5,7 +5,7 @@ import {
   getAllPlaces
 } from '../../../../services/getPlaces'
 import './index.scss'
-export function SearchPlaces({ setPlaces }) {
+export function SearchPlaces({ setPlaces, className }) {
   const initialValues = {
     destination: 'all',
     period: '',
@@ -26,7 +26,7 @@ export function SearchPlaces({ setPlaces }) {
   }
 
   return (
-    <form className="seach-place" onSubmit={handleSubmit}>
+    <form className={`seach-place ${className}`} onSubmit={handleSubmit}>
       <div className="destination">
         <label htmlFor="destination">Destination</label>
         <select
