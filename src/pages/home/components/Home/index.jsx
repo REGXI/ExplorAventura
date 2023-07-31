@@ -1,9 +1,6 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import Sanjuandelsur from '../../../../assets/images/sanjuandelsur.webp'
-import Islaometepe from '../../../../assets/images/islaometepe.webp'
-import Isletasgranada from '../../../../assets/images/isletasgranada.webp'
-import Leon from '../../../../assets/images/leon.webp'
+import Nicaragua from '../../../../assets/images/nicaragua2.webp'
 
 import { SearchPlaces } from '../../../packages/components/SearchPlace'
 export function Home({ t }) {
@@ -14,7 +11,7 @@ export function Home({ t }) {
           <figure>
             <img
               loading="lazy"
-              src={Isletasgranada}
+              src={Nicaragua}
               alt=""
               className="image-gallery__image"
             />
