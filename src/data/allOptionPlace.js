@@ -19,12 +19,12 @@ export const optionsPlaces = [
 ]
 
 export const durationOptions = [
-  { value: '1', label: '1 día' },
-  { value: '2', label: '2 días' },
-  { value: '3', label: '3 días' },
-  { value: '4', label: '4 días' },
-  { value: '5', label: '5 días' },
-  { value: '6', label: '6 días' },
-  { value: '7', label: '7 días' },
-  { value: '8', label: 'Más de una semana' }
+  { value: '1', label: 'day' },
+  { value: '2', label: 'days' },
+  { value: '3', label: 'days' },
+  { value: '4', label: 'days' },
+  { value: '5', label: 'days' },
+  { value: '6', label: 'days' },
+  { value: '7', label: 'days' },
+  { value: '8', label: 'More than a week' }
 ]
