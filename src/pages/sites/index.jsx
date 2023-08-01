@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useRef, useEffect, useState } from 'react'
-import { data } from './components/data'
+import { sites as data } from '../../data/sites'
 import './index.scss'
 
 export default function SitesPage() {
@@ -10,7 +10,7 @@ export default function SitesPage() {
   const ordinalNumber = useRef(null)
   const thumbnailListWrapper = useRef(null)
   const nextBtn = useRef(null)
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(1)
 
   useEffect(() => {
     introduce.current.innerHTML = ''
