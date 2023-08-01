@@ -5,7 +5,7 @@ import LayoutPage from '../../../../components/LayuotPage'
 
 export function Executive({ t }) {
   return (
-    <LayoutPage title="about.executive-title" t={t}>
+    <LayoutPage title="about.executive-title" t={t} className={'executive'}>
       <div className="executive-content">
         <section className="jacqueline">
           <div className="executive-image">

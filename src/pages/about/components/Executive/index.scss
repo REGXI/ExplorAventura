@@ -1,9 +1,15 @@
 @use '../../../../scss/index' as *;
 
+.executive {
+  color: #fff;
+}
+
 .executive-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #111;
+  @include padding-control;
   section {
     display: flex;
     justify-content: space-between;
@@ -106,6 +112,10 @@
 }
 
 @include mobile {
+  .executive {
+    color: #111;
+  }
+
   .executive-content {
     section {
       flex-direction: column;

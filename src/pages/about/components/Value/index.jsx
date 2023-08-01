@@ -3,15 +3,15 @@ import { ValuesList } from '../ValuesList'
 export function Values({ valuesData, t }) {
   return (
     <div className="container-values">
-      <div className="content-values">
-        <div className="content-values__title">
-          <span>{t('general.our')}</span>
-          <h2>{t('about.values')}</h2>
-        </div>
-        <div className="content-values__content">
-          <ValuesList valuesData={valuesData} t={t} />
-        </div>
-      </div>
+      {/* <div className="content-values"> */}
+      {/* <div className="content-values__title"> */}
+      {/* <span>{t('general.our')}</span>
+          <h2>{t('about.values')}</h2> */}
+      {/* </div> */}
+      {/* <div className="content-values__content"> */}
+      {/* <ValuesList valuesData={valuesData} t={t} /> */}
+      {/* </div> */}
+      {/* </div> */}
 
       <div className="goal-statement">
         <div className="goal-statement__title">

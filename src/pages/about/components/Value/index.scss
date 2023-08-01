@@ -1,94 +1,53 @@
 @use '../../../../scss/index' as *;
 
 .container-values {
-  height: calc(100vh - $header-height - 2em);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
-  .content-values {
-    padding: 3em;
-    background-color: $pri-color;
-    width: 60%;
-    height: 100%;
-
-    &__title {
-      color: #fff;
-      margin-bottom: 1em;
-      h2 {
-        font-size: 2em;
-      }
-    }
-  }
+  @include padding-control;
 
   .goal-statement {
-    width: 40%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    color: #fff;
     position: relative;
-    // background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
     background-size: 20px 22px;
     background-image: radial-gradient(
       circle,
-      rgb($pri-color, 0.2) 10%,
+      rgb($pri-color, 1) 10%,
       transparent 1%
     );
-
+    padding: 0 2em;
     &__title {
       z-index: 1;
-      span {
-        color: $pri-color;
-      }
       h2 {
         font-size: 2em;
-
         margin-bottom: 1em;
       }
     }
   }
 }
 
-@media only screen and (max-width: 1290px) {
-  .container-values {
-    justify-content: flex-start;
-    .content-values {
-      padding: 1em 1em;
-      width: 70%;
-    }
-    .goal-statement {
-      width: 30%;
-    }
-  }
-}
-
-@media only screen and (max-width: 1140px) {
-  .container-values {
-    height: auto;
-    .content-values {
-      width: 55%;
-    }
-    .goal-statement {
-      width: 45%;
-      height: calc(100vh - $header-height - 2em);
-    }
-  }
-}
-
 @include mobile {
   .container-values {
-    flex-direction: column;
-    height: auto;
-    .content-values {
-      width: 100%;
-      padding: 1em 1em;
-    }
     .goal-statement {
+      align-self: flex-start;
       width: 100%;
-      height: auto;
-      padding: 1em 0;
-      text-align: center;
+      height: 70%;
+      padding: 0 1em;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      &__title {
+        h2 {
+          font-size: 1.5em;
+        }
+      }
     }
   }
 }
