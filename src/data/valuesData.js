@@ -28,11 +28,5 @@ export const valuesData = [
     title: 'about.commitment',
     description: 'about.commitment-description',
     icon: commitmentIcon
-  },
-  {
-    id: 5,
-    title: 'about.learning',
-    description: 'about.learning-description',
-    icon: learningIcon
   }
 ]
