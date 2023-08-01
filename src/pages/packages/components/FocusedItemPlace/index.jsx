@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next'
+
 export function FocusedItemPlace({ focusedPlace }) {
+  const { t } = useTranslation()
   return (
     <>
       <div className="image-place">
@@ -8,7 +11,7 @@ export function FocusedItemPlace({ focusedPlace }) {
       <div className="information-place">
         <div className="title-place">
           <h3>{focusedPlace?.name}</h3>
-          <p>{focusedPlace?.description}</p>
+          <p>{t(focusedPlace?.description)}</p>
         </div>
         <div className="options-package"></div>
       </div>

@@ -8,7 +8,7 @@ export default function ContactPage() {
     <div className="contact_page">
       <div className="contact-container">
         <div className="title">
-          <h1>Love to hear from you!, Get in touch with us. 👋</h1>
+          <h1>{t('Love to hear from you!, Get in touch with us. 👋')}</h1>
         </div>
 
         <div className="contact-content">

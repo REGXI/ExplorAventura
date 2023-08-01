@@ -5,7 +5,7 @@ export function RenderPlaces({ places, t, handleClickedPlace }) {
   return (
     <>
       <div className="title-related-places">
-        <h2>Related Places</h2>
+        <h2>{t('Related Places')}</h2>
       </div>
 
       <div className="places">

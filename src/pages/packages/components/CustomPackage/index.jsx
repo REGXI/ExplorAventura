@@ -1,10 +1,10 @@
 import './index.scss'
-export function CustomPackage({ randomDestination }) {
+export function CustomPackage({ randomDestination, t }) {
   return (
     <div className="custome-packages__container">
       <section className="custom-packages__content">
         <div className="pacakges__content_title">
-          <h2>customize your package</h2>
+          <h2>{t('customize your package')}</h2>
         </div>
 
         <div className="pacakges__content_img">
@@ -15,23 +15,25 @@ export function CustomPackage({ randomDestination }) {
 
           <div className="pacakges__content_img__info">
             <div className="destination">
-              <small>Team Tours</small>
+              <small>{t('To Order Tour')}</small>
               <h2>ExplorAventura</h2>
             </div>
           </div>
         </div>
 
         <button>
-          <span>To Order Tour</span>
+          <span>{t('To Order Tour')}</span>
         </button>
       </section>
 
       <section className="packages__contact">
-        <p>Haz tu viaje a medida con nosotros, te ayudaremos a planificarlo</p>
+        <p>
+          {t('Make your tailor-made trip with us, we will help you plan it')}
+        </p>
         <pre>
-          <span>Inicia cuando quieras</span>
-          <span>Termina cuando quieras</span>
-          <span>Viaja donde quieras</span>
+          <span>{t('Start whenever you want')}</span>
+          <span>{t('finish whenever you want')}</span>
+          <span>{t('travel where you want')}</span>
         </pre>
       </section>
     </div>

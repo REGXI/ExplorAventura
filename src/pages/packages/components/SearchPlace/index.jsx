@@ -5,7 +5,7 @@ import {
   getAllPlaces
 } from '../../../../services/getPlaces'
 import './index.scss'
-export function SearchPlaces({ setPlaces, className }) {
+export function SearchPlaces({ setPlaces, className, t }) {
   const initialValues = {
     destination: 'all',
     period: '',
@@ -28,14 +28,14 @@ export function SearchPlaces({ setPlaces, className }) {
   return (
     <form className={`seach-place ${className}`} onSubmit={handleSubmit}>
       <div className="destination">
-        <label htmlFor="destination">Destination</label>
+        <label htmlFor="destination">{t('Destination')}</label>
         <select
           name="destination"
           id="destination"
           value={values.destination}
           onChange={handleSelectChange}
         >
-          <option value="all">All</option>
+          <option value="all">{t('All')}</option>
           {optionsPlaces?.map((option, index) => (
             <option key={index} value={option.value}>
               {option.label}
@@ -44,7 +44,7 @@ export function SearchPlaces({ setPlaces, className }) {
         </select>
       </div>
       <div className="period">
-        <label htmlFor="period">Period</label>
+        <label htmlFor="period">{t('Period')}</label>
         <input
           type="date"
           name="period"
@@ -55,7 +55,7 @@ export function SearchPlaces({ setPlaces, className }) {
         />
       </div>
       <div className="duration">
-        <label htmlFor="duration">Duration</label>
+        <label htmlFor="duration">{t('Duration')}</label>
         <select
           name="duration"
           id="duration"
@@ -65,14 +65,14 @@ export function SearchPlaces({ setPlaces, className }) {
           {durationOptions?.map((option, index) => {
             return (
               <option key={index} value={option.value}>
-                {option.label}
+                {option.value} {t(option.label)}
               </option>
             )
           })}
         </select>
       </div>
       <div className="travellers">
-        <label htmlFor="travellers">Travellers</label>
+        <label htmlFor="travellers">{t('Travellers')}</label>
         <input
           type="number"
           name="travellers"

@@ -3,12 +3,12 @@ export function ContactForm({ t }) {
   return (
     <form className="contact-form">
       <div className="box name">
-        <label htmlFor="name">Your name</label>
+        <label htmlFor="name">{t('Your name')}</label>
         <input type="text" name="name" id="name" placeholder="john deere" />
       </div>
 
       <div className="box email">
-        <label htmlFor="email">Your email</label>
+        <label htmlFor="email">{t('Your email')}</label>
         <input
           type="email"
           name="email"
@@ -18,45 +18,45 @@ export function ContactForm({ t }) {
       </div>
 
       <div className="box interested">
-        <label htmlFor="interested">What you are interested</label>
+        <label htmlFor="interested">{t('What you are interested')}</label>
         <select name="interested" id="interested">
           <option value="" selected disabled>
-            Selecciona una opción
+            {t('Select an option')}
           </option>
-          <option value="Vacation Packages">Paquetes de vacaciones</option>
-          <option value="City Tours">Tours por la ciudad</option>
-          <option value="Beach Resorts">Resorts en la playa</option>
-          <option value="Adventure Activities">Actividades de aventura</option>
-          <option value="Cultural Experiences">Experiencias culturales</option>
-          <option value="Nature Exploration">
-            Exploración de la naturaleza
+          <option value="Vacation Packages">{t('Vacation Packages')}</option>
+          <option value="City Tours">{t('City Tours')}</option>
+          <option value="Beach Resorts">{t('Beach Resorts')}</option>
+          <option value="Adventure Activities">
+            {t('Adventure Activities')}
           </option>
-          <option value="Historical Sites">Sitios históricos</option>
-          <option value="Wildlife Watching">
-            Observación de vida silvestre
+          <option value="Cultural Experiences">
+            {t('Cultural Experiences')}
           </option>
-          <option value="Eco-Tourism">Ecoturismo</option>
-          <option value="Volcano Tours">Tours de volcanes</option>
+          <option value="Nature Exploration">{t('Nature Exploration')}</option>
+          <option value="Historical Sites">{t('Historical Sites')}</option>
+          <option value="Wildlife Watching">{t('Wildlife Watching')}</option>
+          <option value="Eco-Tourism">{t('Eco-Tourism')}</option>
+          <option value="Volcano Tours">{t('Volcano Tours')}</option>
         </select>
       </div>
 
       <div className="box phone">
-        <label htmlFor="phone">Your phone</label>
+        <label htmlFor="phone">{t('Your phone')}</label>
         <input type="text" name="phone" id="phone" placeholder="+505 8888" />
       </div>
 
       <div className="box message">
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">{t('Message')}</label>
         <textarea
           name="message"
           id="message"
-          placeholder="Tell us about your dream vacation"
+          placeholder={t('Tell us about your dream vacation')}
         ></textarea>
       </div>
 
       <div className="box submit">
         <button type="submit">
-          Just Send
+          {t('Just Send')}
           <i className="fas fa-paper-plane"></i>
         </button>
       </div>

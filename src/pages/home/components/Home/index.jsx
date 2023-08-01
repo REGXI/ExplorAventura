@@ -26,7 +26,7 @@ export function Home({ t }) {
         {/* <Link to="/contact" className="custome-buttom">
           {t('home.contact-use')}
         </Link> */}
-        <SearchPlaces className={'home-search'} />
+        <SearchPlaces className={'home-search'} t={t} />
       </section>
     </div>
   )

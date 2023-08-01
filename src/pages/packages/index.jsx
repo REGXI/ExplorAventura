@@ -27,16 +27,14 @@ export default function PackagesPage() {
       <section className="package">
         <section className="information-package">
           <div className="title">
-            <h1>Buy Vacation Packages at the Best Prices</h1>
-            <p>Explore Best Selling Package</p>
+            <h1>{t('Buy Vacation Packages at the Best Prices')}</h1>
+            <p>{t('Explore Best Selling Package')}</p>
 
-            <button>
-              <span>Contact with Agent</span>
-            </button>
+            <button>{t('Contact with Agent')}</button>
           </div>
 
           <div className="search-package">
-            <SearchPlaces setPlaces={setPlaces} />
+            <SearchPlaces setPlaces={setPlaces} t={t} />
           </div>
 
           <div className="related-places">
@@ -53,7 +51,7 @@ export default function PackagesPage() {
       </section>
 
       <section className="custom-packages">
-        <CustomPackage randomDestination={randomDestination} />
+        <CustomPackage randomDestination={randomDestination} t={t} />
       </section>
     </div>
   )
