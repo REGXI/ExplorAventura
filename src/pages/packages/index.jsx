@@ -2,7 +2,7 @@ import './index.scss'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SearchPlaces } from './components/SearchPlace'
-import { getAllPlaces, getRamdonDestinations } from '../../services/getPlaces'
+import { getAllPlaces } from '../../services/getPlaces'
 import { RenderPlaces } from './components/RenderPlaces'
 import { FocusedItemPlace } from './components/FocusedItemPlace'
 import { CustomPackage } from './components/CustomPackage'
@@ -12,7 +12,6 @@ export default function PackagesPage() {
   const { t } = useTranslation()
   const [places, setPlaces] = useState(getAllPlaces())
   const [focusedPlace, setFocusedPlace] = useState({})
-  const [randomDestination, setRamdonDestination] = useState({})
   const dispatch = useDispatch()
 
   const handleClickedPlace = (place) => setFocusedPlace({ ...place })
@@ -24,10 +23,6 @@ export default function PackagesPage() {
   useEffect(() => {
     setFocusedPlace(places[0])
   }, [places])
-
-  useEffect(() => {
-    setRamdonDestination(getRamdonDestinations())
-  }, [])
 
   return (
     <div className="packages-page">
@@ -58,7 +53,7 @@ export default function PackagesPage() {
       </section>
 
       <section className="custom-packages">
-        <CustomPackage randomDestination={randomDestination} t={t} />
+        <CustomPackage t={t} />
       </section>
     </div>
   )

@@ -1,13 +1,13 @@
-import granada_isletas_granada from '../assets/images/granada_isletas_granada.jfif'
-import granada_parque_central from '../assets/images/granada_parque_central.jpg'
-import granada_mirador_merced from '../assets/images/granada_mirador_merced.jpg'
-import granada_fortaleza_polvora from '../assets/images/granada_fortaleza_polvora.jpg'
+import granada_isletas_granada from '../assets/images/granada_isletas_granada.webp'
+import granada_parque_central from '../assets/images/granada_parque_central.webp'
+import granada_mirador_merced from '../assets/images/granada_mirador_merced.webp'
+import granada_fortaleza_polvora from '../assets/images/granada_fortaleza_polvora.webp'
 
-import rivas_isla_de_ometepe from '../assets/images/rivas_isla_de_ometepe.jpg'
-import rivas_playa_gigante from '../assets/images/rivas_playa_gigante.jpg'
-import rivas_san_juan_del_sur from '../assets/images/rivas_san_juan_del_sur.jpg'
-import rivas_reserva_indio_maiz from '../assets/images/rivas_reserva_indio_maiz.jfif'
-import rivas_los_guatuzos from '../assets/images/rivas_los_guatuzo.jfif'
+import rivas_isla_de_ometepe from '../assets/images/rivas_isla_de_ometepe.webp'
+import rivas_playa_gigante from '../assets/images/rivas_playa_gigante.webp'
+import rivas_san_juan_del_sur from '../assets/images/rivas_san_juan_del_sur.webp'
+import rivas_reserva_indio_maiz from '../assets/images/rivas_reserva_indio_maiz.webp'
+import rivas_los_guatuzos from '../assets/images/rivas_los_guatuzo.webp'
 
 export const places = [
   {

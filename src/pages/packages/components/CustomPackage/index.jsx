@@ -1,5 +1,6 @@
+import granada_isletas_de_granada from '../../../../assets/images/granada_isletas_granada.webp'
 import './index.scss'
-export function CustomPackage({ randomDestination, t }) {
+export function CustomPackage({ t }) {
   return (
     <div className="custome-packages__container">
       <section className="custom-packages__content">
@@ -9,7 +10,7 @@ export function CustomPackage({ randomDestination, t }) {
 
         <div className="pacakges__content_img">
           <img
-            src={randomDestination.place?.image}
+            src={granada_isletas_de_granada}
             alt="Paquetes personalizados | ExplorAventura"
           />
 
