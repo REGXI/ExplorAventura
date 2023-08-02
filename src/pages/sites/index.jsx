@@ -35,7 +35,7 @@ export default function SitesPage() {
             <h1 class="place" style="--idx: 1">${sites[i].place}</h1>
           </span>
           <span>
-            <p class="describe" style="--idx: 2">${sites[i].describe}</p>
+            <p class="describe" style="--idx: 2">${t(sites[i].describe)}</p>
           </span>
           <span>
             <button class="discover-button" style="--idx: 3">Discover Now</button>

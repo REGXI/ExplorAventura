@@ -7,28 +7,24 @@ export const sites = [
     img: site_granada,
     country: 'Granada - Nicaragua',
     place: 'Granada',
-    describe:
-      'Granada, colonial city in Nicaragua. Cobbled streets, historic architecture and a vibrant atmosphere. Enjoy its charm and culture!'
+    describe: 'summary granada site'
   },
   {
     img: Ometepe,
     country: 'Rivas - Nicaragua',
     place: 'Isla de Ometepe',
-    describe:
-      'Explore the mystical Isla de Ometepe in Nicaragua, home to two majestic volcanoes and exuberant nature. Amazing!'
+    describe: 'summary ometepe site'
   },
   {
     img: cerronegro,
     country: 'Leon - Nicaragua',
     place: 'Volcan Cerro Negro',
-    describe:
-      'Experimenta la emoción del "Volcano Boarding" en el activo Cerro Negro, Nicaragua. ¡Desciende sus laderas negras a toda velocidad!'
+    describe: 'summary cerro negro site'
   },
   {
     img: atlanticoNorte,
     country: 'Atlantico Norte - Nicaragua',
     place: 'Atlantico Norte',
-    describe:
-      'Golden beaches, warm Caribbean Sea, rich culture, exuberant nature, adventure and hospitality in Nicaragua. Find out now!'
+    describe: 'summary atlantico norte'
   }
 ]
