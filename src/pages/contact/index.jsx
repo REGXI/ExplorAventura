@@ -1,8 +1,16 @@
 import './index.scss'
 import { ContactForm } from './component/ContactForm'
 import { useTranslation } from 'react-i18next'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { selectNavigationColor } from '../../store/features/navigationColorSlice'
+
 export default function ContactPage() {
   const { t } = useTranslation()
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(selectNavigationColor('default'))
+  }, [dispatch])
 
   return (
     <div className="contact_page">

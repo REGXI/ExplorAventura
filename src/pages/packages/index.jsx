@@ -6,13 +6,20 @@ import { getAllPlaces, getRamdonDestinations } from '../../services/getPlaces'
 import { RenderPlaces } from './components/RenderPlaces'
 import { FocusedItemPlace } from './components/FocusedItemPlace'
 import { CustomPackage } from './components/CustomPackage'
+import { useDispatch } from 'react-redux'
+import { selectNavigationColor } from '../../store/features/navigationColorSlice'
 export default function PackagesPage() {
   const { t } = useTranslation()
   const [places, setPlaces] = useState(getAllPlaces())
   const [focusedPlace, setFocusedPlace] = useState({})
   const [randomDestination, setRamdonDestination] = useState({})
+  const dispatch = useDispatch()
 
   const handleClickedPlace = (place) => setFocusedPlace({ ...place })
+
+  useEffect(() => {
+    dispatch(selectNavigationColor('default'))
+  }, [dispatch])
 
   useEffect(() => {
     setFocusedPlace(places[0])

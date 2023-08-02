@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { useRef, useEffect, useState } from 'react'
 import { sites as data } from '../../data/sites'
+import { useDispatch } from 'react-redux'
+import { selectNavigationColor } from '../../store/features/navigationColorSlice'
 import './index.scss'
 
 export default function SitesPage() {
@@ -11,6 +13,11 @@ export default function SitesPage() {
   const thumbnailListWrapper = useRef(null)
   const nextBtn = useRef(null)
   const [currentIndex, setCurrentIndex] = useState(1)
+
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(selectNavigationColor('light'))
+  }, [dispatch])
 
   useEffect(() => {
     introduce.current.innerHTML = ''
