@@ -1,10 +1,22 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence, delay } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import SocialMedia from '../SocialMedia'
+import { NAVIGATION_ITEMS } from '../../data/navigationItems'
 import './index.scss'
 
+const variantsItem = {
+  exit: {
+    opacity: 0,
+    heigh: 0,
+
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.3,
+      delay: 0.8
+    }
+  }
+}
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
@@ -15,52 +27,6 @@ export default function Navigation() {
   }
 
   const changeLanguage = (lng) => i18n.changeLanguage(lng)
-
-  const NAVIGATION_ITEMS = [
-    {
-      id: 1,
-      name: 'navigation.home',
-      path: '/',
-      delay: 0.5
-    },
-    {
-      id: 2,
-      name: 'navigation.sites',
-      path: '/sites',
-      delay: 0.4
-    },
-    {
-      id: 3,
-      name: 'navigation.about',
-      path: '/about',
-      delay: 0.3
-    },
-    {
-      id: 4,
-      name: 'navigation.package',
-      path: '/package',
-      delay: 0.2
-    },
-    {
-      id: 5,
-      name: 'navigation.contact',
-      path: '/contact',
-      delay: 0.1
-    }
-  ]
-
-  const variantsItem = {
-    exit: {
-      opacity: 0,
-      heigh: 0,
-
-      transition: {
-        ease: 'easeInOut',
-        duration: 0.3,
-        delay: 0.8
-      }
-    }
-  }
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
