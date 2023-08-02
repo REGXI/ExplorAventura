@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 
 import HomePage from './pages/home'
 import SitesPage from './pages/sites'
@@ -7,8 +7,10 @@ import PackagesPage from './pages/packages'
 import ContactPage from './pages/contact'
 
 export default function Router() {
+  const location = useLocation()
+
   return (
-    <Routes>
+    <Routes path={location.pathname} location={location}>
       <Route path="/" element={<HomePage />} />
       <Route path="/sites" element={<SitesPage />} />
       <Route path="/about" element={<AboutPage />} />
