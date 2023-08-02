@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 import { NAVIGATION_ITEMS } from '../../data/navigationItems'
 import './index.scss'
 
@@ -21,6 +22,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [width, setWidth] = useState(window.innerWidth)
   const { t, i18n } = useTranslation()
+  const { navigationColor } = useSelector((state) => state.navigationColor)
 
   const handleResize = () => {
     window.innerWidth < 1015 ? setIsMenuOpen(false) : setIsMenuOpen(true)
@@ -35,7 +37,11 @@ export default function Navigation() {
 
   return (
     <nav className="navigation">
-      <div className="menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+      <div
+        className="menu"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        style={{ color: navigationColor == 'light' && '#fff' }}
+      >
         <i className="fa-solid fa-bars" />
       </div>
 
@@ -77,6 +83,7 @@ export default function Navigation() {
                         ? 'navigation__link navigation__link--active'
                         : 'navigation__link'
                     }
+                    style={{ color: navigationColor == 'light' && '#fff' }}
                   >
                     {t(item.name)}
                   </NavLink>
@@ -96,8 +103,12 @@ export default function Navigation() {
                     delay: 0
                   }
                 }}
+                style={{ color: navigationColor == 'light' && '#fff' }}
               >
-                <span className="navigation__link language">
+                <span
+                  className="navigation__link language"
+                  style={{ color: navigationColor == 'light' && '#fff' }}
+                >
                   {t('navigation.language')}{' '}
                   <i className="fa-solid fa-globe-americas" />
                 </span>

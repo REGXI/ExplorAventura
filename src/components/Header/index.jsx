@@ -2,14 +2,15 @@ import { useState, useRef } from 'react'
 import Navigation from '../Navigation'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/logo/Exploraventura.webp'
+import { useSelector } from 'react-redux'
 import SocialMedia from '../SocialMedia'
 
 import './index.scss'
 
 export default function Header() {
-  // initial state
   const headerRef = useRef(null)
   let lastScrollTop = 0
+  const { navigationColor } = useSelector((state) => state.navigationColor)
 
   window.addEventListener('scroll', () => {
     const header = headerRef.current
@@ -32,7 +33,9 @@ export default function Header() {
         <div className="header__logo">
           <Link to="/">
             <img src={Logo} alt="ExplorAventura travel" />
-            <span>ExplorAventura</span>
+            <span style={{ color: navigationColor === 'light' && '#fff' }}>
+              ExplorAventura
+            </span>
           </Link>
         </div>
 
@@ -40,7 +43,7 @@ export default function Header() {
           <Navigation />
         </div>
 
-        <SocialMedia />
+        <SocialMedia navigationColor={navigationColor} />
       </div>
     </header>
   )

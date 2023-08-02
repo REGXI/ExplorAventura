@@ -1,7 +1,10 @@
-export default function SocialMedia() {
+export default function SocialMedia({ navigationColor }) {
   return (
     <div className="header__social">
-      <a href="tel:+51999999999">
+      <a
+        href="tel:+51999999999"
+        style={{ color: navigationColor === 'light' && '#fff' }}
+      >
         <i className="fa-solid fa-phone" />
         <span>+505 1234 567</span>
       </a>

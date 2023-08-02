@@ -29,7 +29,7 @@
       &:hover {
         background: $pri-color;
         color: #fff;
-        opacity: 0.6;
+        opacity: 0.8;
       }
     }
     .content-language {
@@ -167,7 +167,7 @@
         }
 
         .navigation__link--active {
-          background: #fff;
+          background: rgb(255, 255, 255, 0.5);
           color: #333;
           width: 100%;
         }
