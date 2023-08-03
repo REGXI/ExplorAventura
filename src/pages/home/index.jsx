@@ -7,8 +7,10 @@ import { Testimonials } from './components/Testimonials'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
+import TransitionPage from '../transitonPage'
+import './index.scss'
 
-export default function HomePage() {
+const HomePage = () => {
   const { t } = useTranslation()
 
   const dispatch = useDispatch()
@@ -33,3 +35,5 @@ export default function HomePage() {
     </Layout>
   )
 }
+
+export default TransitionPage(HomePage)

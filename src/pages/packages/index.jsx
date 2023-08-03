@@ -8,7 +8,8 @@ import { FocusedItemPlace } from './components/FocusedItemPlace'
 import { CustomPackage } from './components/CustomPackage'
 import { useDispatch } from 'react-redux'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
-export default function PackagesPage() {
+import TransitionPage from '../transitonPage'
+const PackagesPage = () => {
   const { t } = useTranslation()
   const [places, setPlaces] = useState(getAllPlaces())
   const [focusedPlace, setFocusedPlace] = useState({})
@@ -58,3 +59,5 @@ export default function PackagesPage() {
     </div>
   )
 }
+
+export default TransitionPage(PackagesPage)

@@ -4,8 +4,9 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
+import TransitionPage from '../transitonPage'
 
-export default function ContactPage() {
+const ContactPage = () => {
   const { t } = useTranslation()
   const dispatch = useDispatch()
   useEffect(() => {
@@ -26,3 +27,5 @@ export default function ContactPage() {
     </div>
   )
 }
+
+export default TransitionPage(ContactPage)

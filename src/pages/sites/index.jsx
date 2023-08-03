@@ -3,9 +3,10 @@ import { useRef, useEffect, useState } from 'react'
 import { sites as data } from '../../data/sites'
 import { useDispatch } from 'react-redux'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
+import TransitionPage from '../transitonPage'
 import './index.scss'
 
-export default function SitesPage() {
+const SitesPage = () => {
   const { t } = useTranslation()
   const [sites, setSites] = useState(data)
   const introduce = useRef(null)
@@ -143,3 +144,5 @@ export default function SitesPage() {
     </div>
   )
 }
+
+export default TransitionPage(SitesPage)

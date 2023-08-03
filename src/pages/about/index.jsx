@@ -8,7 +8,9 @@ import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
 import AboutImage from '../../assets/images/about-image.webp'
-export default function AboutPage() {
+import TransitionPage from '../transitonPage'
+
+const AboutPage = () => {
   const { t } = useTranslation()
   const dispatch = useDispatch()
 
@@ -30,3 +32,5 @@ export default function AboutPage() {
     </div>
   )
 }
+
+export default TransitionPage(AboutPage)

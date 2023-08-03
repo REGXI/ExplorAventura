@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 
 import HomePage from './pages/home'
 import SitesPage from './pages/sites'
@@ -11,7 +12,7 @@ export default function Router() {
 
   return (
     <Routes path={location.pathname} location={location}>
-      <Route path="/" element={<HomePage />} />
+      <Route index path="/" element={<HomePage />} />
       <Route path="/sites" element={<SitesPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/package" element={<PackagesPage />} />
