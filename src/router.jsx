@@ -11,12 +11,14 @@ export default function Router() {
   const location = useLocation()
 
   return (
-    <Routes path={location.pathname} location={location}>
-      <Route index path="/" element={<HomePage />} />
-      <Route path="/sites" element={<SitesPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/package" element={<PackagesPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-    </Routes>
+    <AnimatePresence mode="wait">
+      <Routes path={location.pathname} location={location}>
+        <Route index path="/" element={<HomePage />} />
+        <Route path="/sites" element={<SitesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/package" element={<PackagesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </AnimatePresence>
   )
 }
