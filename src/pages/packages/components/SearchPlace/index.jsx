@@ -4,8 +4,14 @@ import {
   getPlacesByDestination,
   getAllPlaces
 } from '../../../../services/getPlaces'
+import { useNavigate } from 'react-router-dom'
 import './index.scss'
-export function SearchPlaces({ setPlaces, className, t }) {
+export function SearchPlaces({
+  setPlaces,
+  className,
+  t,
+  navigatePage = false
+}) {
   const initialValues = {
     destination: 'all',
     period: '',
@@ -16,9 +22,16 @@ export function SearchPlaces({ setPlaces, className, t }) {
   const [values, handleInputChange, reset, handleSelectChange] =
     useForm(initialValues)
 
+  const navigate = useNavigate()
+
   const handleSubmit = (event) => {
     event.preventDefault()
     const { destination } = values
+
+    if (navigatePage) {
+      // navigate package page with destination param
+      navigate(`/package/${destination}`)
+    }
 
     destination === 'all'
       ? setPlaces(getAllPlaces())
