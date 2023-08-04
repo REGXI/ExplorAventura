@@ -1,10 +1,44 @@
+import { useForm } from '../../../../hooks/useForm'
+import { sendEmail } from '../../../../services/sendEmail'
+
 import './index.scss'
 export function ContactForm({ t }) {
+  const initialValues = {
+    name: '',
+    email: '',
+    interested: '',
+    phone: '',
+    message: ''
+  }
+
+  const [values, handleInputChange, clear] = useForm(initialValues)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const response = await sendEmail('contact', e.target)
+
+    if (response.status === 200) {
+      clear()
+      alert('Email sent successfully')
+    } else {
+      alert('Something went wrong')
+    }
+  }
+
   return (
-    <form className="contact-form">
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="box name">
         <label htmlFor="name">{t('Your name')}</label>
-        <input type="text" name="name" id="name" placeholder="john deere" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="john deere"
+          onChange={handleInputChange}
+          value={values.name}
+          required
+        />
       </div>
 
       <div className="box email">
@@ -14,16 +48,22 @@ export function ContactForm({ t }) {
           name="email"
           id="email"
           placeholder="email@gmail.com"
+          onChange={handleInputChange}
+          value={values.email}
+          required
         />
       </div>
 
       <div className="box interested">
         <label htmlFor="interested">{t('What you are interested')}</label>
-        <select name="interested" id="interested">
-          <option value="" selected disabled>
-            {t('Select an option')}
-          </option>
-          <option value="Vacation Packages">{t('Vacation Packages')}</option>
+        <select
+          name="interested"
+          id="interested"
+          onChange={handleInputChange}
+          value={values.interested}
+          required
+        >
+          <option value="">{t('Select an option')}</option>
           <option value="City Tours">{t('City Tours')}</option>
           <option value="Beach Resorts">{t('Beach Resorts')}</option>
           <option value="Adventure Activities">
@@ -42,7 +82,15 @@ export function ContactForm({ t }) {
 
       <div className="box phone">
         <label htmlFor="phone">{t('Your phone')}</label>
-        <input type="text" name="phone" id="phone" placeholder="+505 8888" />
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="+505 8888"
+          onChange={handleInputChange}
+          value={values.phone}
+          required
+        />
       </div>
 
       <div className="box message">
@@ -51,6 +99,9 @@ export function ContactForm({ t }) {
           name="message"
           id="message"
           placeholder={t('Tell us about your dream vacation')}
+          onChange={handleInputChange}
+          value={values.message}
+          required
         ></textarea>
       </div>
 
