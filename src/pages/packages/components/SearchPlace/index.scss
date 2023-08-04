@@ -8,6 +8,8 @@
   justify-content: space-between;
   gap: 1em;
   width: 130%;
+  position: relative;
+  z-index: 10;
 
   div {
     line-height: 2.2em;
