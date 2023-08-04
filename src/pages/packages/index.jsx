@@ -2,18 +2,21 @@ import './index.scss'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SearchPlaces } from './components/SearchPlace'
-import { getAllPlaces } from '../../services/getPlaces'
+import { getAllPlaces, getPlacesByDestination } from '../../services/getPlaces'
 import { RenderPlaces } from './components/RenderPlaces'
 import { FocusedItemPlace } from './components/FocusedItemPlace'
 import { CustomPackage } from './components/CustomPackage'
 import { useDispatch } from 'react-redux'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
+import { useParams } from 'react-router-dom'
 import TransitionPage from '../transitonPage'
 const PackagesPage = () => {
   const { t } = useTranslation()
   const [places, setPlaces] = useState(getAllPlaces())
   const [focusedPlace, setFocusedPlace] = useState({})
   const dispatch = useDispatch()
+
+  const { destination } = useParams()
 
   const handleClickedPlace = (place) => setFocusedPlace({ ...place })
 
@@ -25,6 +28,11 @@ const PackagesPage = () => {
     setFocusedPlace(places[0])
   }, [places])
 
+  useEffect(() => {
+    if (destination) {
+      setPlaces(getPlacesByDestination(destination))
+    }
+  }, [destination])
   return (
     <div className="packages-page">
       <section className="package">
