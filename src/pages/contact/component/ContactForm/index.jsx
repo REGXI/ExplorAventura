@@ -1,5 +1,6 @@
 import { useForm } from '../../../../hooks/useForm'
 import { sendEmail } from '../../../../services/sendEmail'
+import { notify } from '../../../../services/notification'
 
 import './index.scss'
 export function ContactForm({ t }) {
@@ -15,14 +16,15 @@ export function ContactForm({ t }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    notify({ type: 'info', message: t('sending email') })
 
     const response = await sendEmail('contact', e.target)
 
     if (response.status === 200) {
       clear()
-      alert('Email sent successfully')
+      notify({ type: 'success', message: t('send email success') })
     } else {
-      alert('Something went wrong')
+      notify('error', t('send email error'))
     }
   }
 
