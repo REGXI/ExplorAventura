@@ -7,24 +7,28 @@ export const sites = [
     img: site_granada,
     country: 'Granada - Nicaragua',
     place: 'Granada',
-    describe: 'summary granada site'
+    describe: 'summary granada site',
+    destination: 'granada'
   },
   {
     img: Ometepe,
     country: 'Rivas - Nicaragua',
     place: 'Isla de Ometepe',
-    describe: 'summary ometepe site'
+    describe: 'summary ometepe site',
+    destination: 'rivas'
   },
   {
     img: cerronegro,
     country: 'Leon - Nicaragua',
     place: 'Volcan Cerro Negro',
-    describe: 'summary cerro negro site'
+    describe: 'summary cerro negro site',
+    destination: 'leon'
   },
   {
     img: atlanticoNorte,
     country: 'Atlantico Norte - Nicaragua',
     place: 'Atlantico Norte',
-    describe: 'summary atlantico norte'
+    describe: 'summary atlantico norte',
+    destination: 'atlantico-norte'
   }
 ]

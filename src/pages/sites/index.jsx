@@ -4,6 +4,7 @@ import { sites as data } from '../../data/sites'
 import { useDispatch } from 'react-redux'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
 import TransitionPage from '../transitonPage'
+import { useNavigate } from 'react-router-dom'
 import './index.scss'
 
 const SitesPage = () => {
@@ -14,11 +15,16 @@ const SitesPage = () => {
   const thumbnailListWrapper = useRef(null)
   const nextBtn = useRef(null)
   const [currentIndex, setCurrentIndex] = useState(1)
+  const navigate = useNavigate()
 
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(selectNavigationColor('light'))
   }, [dispatch])
+
+  function handleDiscoverButton(destination) {
+    navigate(`/package/${destination}`)
+  }
 
   useEffect(() => {
     introduce.current.innerHTML = ''
@@ -28,20 +34,32 @@ const SitesPage = () => {
     for (let i = 0; i < sites.length; i++) {
       const introduceContent = document.createElement('div')
       introduceContent.classList.add('wrapper')
+
+      const buttonDiscover = document.createElement('button')
+      buttonDiscover.classList.add('discover-button')
+      buttonDiscover.textContent = 'Discover Now'
+      buttonDiscover.style.setProperty('--idx', 3)
+      buttonDiscover.addEventListener('click', () => {
+        handleDiscoverButton(sites[i].destination)
+      })
+
       introduceContent.innerHTML = `
-          <span> 
-            <h5 class="country" style="--idx: 0">${sites[i].country}</h5>
-          </span>
-          <span>
-            <h1 class="place" style="--idx: 1">${sites[i].place}</h1>
-          </span>
-          <span>
-            <p class="describe" style="--idx: 2">${t(sites[i].describe)}</p>
-          </span>
-          <span>
-            <button class="discover-button" style="--idx: 3">Discover Now</button>
-          </span>
-        `
+      <span> 
+        <h5 class="country" style="--idx: 0">${sites[i].country}</h5>
+      </span>
+      <span>
+        <h1 class="place" style="--idx: 1">${sites[i].place}</h1>
+      </span>
+      <span>
+        <p class="describe" style="--idx: 2">${t(sites[i].describe)}</p>
+      </span>
+      <span class="discover-button-container">
+        
+      </span>
+    `
+
+      introduceContent.children[3].appendChild(buttonDiscover)
+
       introduce.current.appendChild(introduceContent)
 
       const ordinalNumberContent = document.createElement('h2')
