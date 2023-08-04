@@ -28,7 +28,16 @@ export default function Navigation() {
     window.innerWidth < 1015 ? setIsMenuOpen(false) : setIsMenuOpen(true)
   }
 
-  const changeLanguage = (lng) => i18n.changeLanguage(lng)
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+    lostFocus()
+  }
+
+  const lostFocus = () => {
+    if (window.innerWidth < 1015) {
+      setIsMenuOpen(false)
+    }
+  }
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
@@ -75,6 +84,7 @@ export default function Navigation() {
                       delay: item.delay
                     }
                   }}
+                  onClick={() => lostFocus()}
                 >
                   <NavLink
                     to={item.path}
