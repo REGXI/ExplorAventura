@@ -6,10 +6,16 @@ import { getAllPlaces, getPlacesByDestination } from '../../services/getPlaces'
 import { RenderPlaces } from './components/RenderPlaces'
 import { FocusedItemPlace } from './components/FocusedItemPlace'
 import { CustomPackage } from './components/CustomPackage'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
 import { useParams } from 'react-router-dom'
+import {
+  selectSearchPlaces,
+  validateSearchPlaceData
+} from '../../store/features/searchPlaceSlice'
 import TransitionPage from '../transitonPage'
+import { notify } from '../../services/notification'
+
 const PackagesPage = () => {
   const { t } = useTranslation()
   const [places, setPlaces] = useState(getAllPlaces())
@@ -17,6 +23,7 @@ const PackagesPage = () => {
   const dispatch = useDispatch()
 
   const { destination } = useParams()
+  const searchPlaceState = useSelector(selectSearchPlaces)
 
   const handleClickedPlace = (place) => setFocusedPlace({ ...place })
 
@@ -33,6 +40,17 @@ const PackagesPage = () => {
       setPlaces(getPlacesByDestination(destination))
     }
   }, [destination])
+
+  const toggleContactAgent = () => {
+    const validate = validateSearchPlaceData(searchPlaceState)
+
+    console.log('validate', validate)
+
+    if (validate) {
+      notify({ type: 'warn', message: t(validate) })
+    }
+  }
+
   return (
     <div className="packages-page">
       <section className="package">
@@ -41,7 +59,9 @@ const PackagesPage = () => {
             <h1>{t('Buy Vacation Packages at the Best Prices')}</h1>
             <p>{t('Explore Best Selling Package')}</p>
 
-            <button>{t('Contact with Agent')}</button>
+            <button onClick={toggleContactAgent}>
+              {t('Contact with Agent')}
+            </button>
           </div>
 
           <div className="search-package">
