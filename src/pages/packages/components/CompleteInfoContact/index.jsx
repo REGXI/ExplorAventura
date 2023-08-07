@@ -17,6 +17,8 @@ export const CompleteInfoContact = ({
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    notify({ type: 'info', message: t('Sending email...') })
+
     const newSearchPlaceState = {
       ...searchPlaceState,
       ...values
