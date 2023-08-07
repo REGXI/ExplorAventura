@@ -9,6 +9,10 @@ import { CustomPackage } from './components/CustomPackage'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
 import { useParams } from 'react-router-dom'
+import { useModal } from '../../hooks/useModal'
+import Modal from '../../components/Modal'
+import { AnimatePresence } from 'framer-motion'
+import { CompleteInfoContact } from './components/CompleteInfoContact'
 import {
   selectSearchPlaces,
   validateSearchPlaceData
@@ -21,6 +25,8 @@ const PackagesPage = () => {
   const [places, setPlaces] = useState(getAllPlaces())
   const [focusedPlace, setFocusedPlace] = useState({})
   const dispatch = useDispatch()
+
+  const { isOpenModal, handleOpenModal, handleCloseModal } = useModal()
 
   const { destination } = useParams()
   const searchPlaceState = useSelector(selectSearchPlaces)
@@ -44,47 +50,62 @@ const PackagesPage = () => {
   const toggleContactAgent = () => {
     const validate = validateSearchPlaceData(searchPlaceState)
 
-    console.log('validate', validate)
-
     if (validate) {
-      notify({ type: 'warn', message: t(validate) })
+      return notify({ type: 'warn', message: t(validate) })
     }
+
+    handleOpenModal()
   }
 
   return (
-    <div className="packages-page">
-      <section className="package">
-        <section className="information-package">
-          <div className="title">
-            <h1>{t('Buy Vacation Packages at the Best Prices')}</h1>
-            <p>{t('Explore Best Selling Package')}</p>
+    <>
+      <div className="packages-page">
+        <section className="package">
+          <section className="information-package">
+            <div className="title">
+              <h1>{t('Buy Vacation Packages at the Best Prices')}</h1>
+              <p>{t('Explore Best Selling Package')}</p>
 
-            <button onClick={toggleContactAgent}>
-              {t('Contact with Agent')}
-            </button>
-          </div>
+              <button onClick={toggleContactAgent}>
+                {t('Contact with Agent')}
+              </button>
+            </div>
 
-          <div className="search-package">
-            <SearchPlaces setPlaces={setPlaces} t={t} />
-          </div>
+            <div className="search-package">
+              <SearchPlaces setPlaces={setPlaces} t={t} />
+            </div>
 
-          <div className="related-places">
-            <RenderPlaces
-              places={places}
+            <div className="related-places">
+              <RenderPlaces
+                places={places}
+                t={t}
+                handleClickedPlace={handleClickedPlace}
+              />
+            </div>
+          </section>
+          <section className="package-container">
+            <FocusedItemPlace focusedPlace={focusedPlace} />
+          </section>
+        </section>
+
+        <section className="custom-packages">
+          <CustomPackage t={t} />
+        </section>
+      </div>
+
+      <AnimatePresence initial={false} onExitComplete={handleCloseModal}>
+        {isOpenModal && (
+          <Modal modalOpen={isOpenModal} handleClose={handleCloseModal}>
+            <CompleteInfoContact
+              handleCloseModal={handleCloseModal}
               t={t}
-              handleClickedPlace={handleClickedPlace}
+              searchPlaceState={searchPlaceState}
+              notify={notify}
             />
-          </div>
-        </section>
-        <section className="package-container">
-          <FocusedItemPlace focusedPlace={focusedPlace} />
-        </section>
-      </section>
-
-      <section className="custom-packages">
-        <CustomPackage t={t} />
-      </section>
-    </div>
+          </Modal>
+        )}
+      </AnimatePresence>
+    </>
   )
 }
 
