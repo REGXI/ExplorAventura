@@ -5,7 +5,10 @@ import {
   getAllPlaces
 } from '../../../../services/getPlaces'
 import { useNavigate } from 'react-router-dom'
+import { setSearchPlaceData } from '../../../../store/features/searchPlaceSlice'
+import { useDispatch } from 'react-redux'
 import './index.scss'
+import { useEffect } from 'react'
 export function SearchPlaces({
   setPlaces,
   className,
@@ -19,6 +22,8 @@ export function SearchPlaces({
     travellers: ''
   }
 
+  const dispatch = useDispatch()
+
   const [values, handleInputChange, reset, handleSelectChange] =
     useForm(initialValues)
 
@@ -29,7 +34,6 @@ export function SearchPlaces({
     const { destination } = values
 
     if (navigatePage) {
-      // navigate package page with destination param
       navigate(`/package/${destination}`)
     }
 
@@ -37,6 +41,10 @@ export function SearchPlaces({
       ? setPlaces(getAllPlaces())
       : setPlaces(getPlacesByDestination(destination))
   }
+
+  useEffect(() => {
+    dispatch(setSearchPlaceData(values))
+  }, [dispatch, values])
 
   return (
     <form className={`seach-place ${className}`} onSubmit={handleSubmit}>
