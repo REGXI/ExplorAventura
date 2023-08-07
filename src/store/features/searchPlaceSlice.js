@@ -33,6 +33,27 @@ export const setSearchPlaceData =
     )
   }
 
+export const validateSearchPlaceData = ({
+  destination,
+  period,
+  duration,
+  travellers
+}) => {
+  if (destination === 'all') {
+    return 'Please select a destination'
+  }
+  if (period === '') {
+    return 'Please select a period'
+  }
+  if (duration === '') {
+    return 'Please select a duration'
+  }
+  if (travellers === '') {
+    return 'Please select a number of travellers'
+  }
+  return ''
+}
+
 export const selectSearchPlaces = (state) => state.searchPlace
 
 export default searchPlaceSlice.reducer
