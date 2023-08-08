@@ -51,9 +51,9 @@ export default function Footer() {
             <li>
               <i className="fas fa-phone-alt" />{' '}
               <p>
-                <span>+505 12345678</span>
+                <span>(505) 8565 1394</span>
                 <br />
-                <span>+505 12345678</span>
+                <span>(505) 7832 1145</span>
               </p>
             </li>
             <li>
@@ -80,8 +80,13 @@ export default function Footer() {
       <div className="footer-copyright">
         <p>
           © {currentYear} ExplorAventura. {t('footer.all-rights-reserved')}{' '}
-          <a href="">exploraventuratravel.com</a> {t('general.by')}{' '}
-          <a href="">REGXI S.A</a>
+          <a href="https://exploraventuratravel.com" target="_blank">
+            exploraventuratravel.com
+          </a>{' '}
+          {t('general.by')}{' '}
+          <a href="https://regxi.com" target="_blank">
+            REGXI S.A
+          </a>
         </p>
       </div>
     </footer>
