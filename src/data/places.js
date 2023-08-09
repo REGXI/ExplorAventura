@@ -143,12 +143,12 @@ export const places = [
       {
         name: 'Volcán Masaya',
         image: masaya_volcan_masaya,
-        description: 'Volcán Masaya'
+        description: 'summary volcan masaya'
       },
       {
         name: 'Volcán Masaya',
         image: masaya_volcan_masaya2,
-        description: 'Volcán Masaya'
+        description: 'summary volcan masaya'
       }
     ]
   },
@@ -158,7 +158,7 @@ export const places = [
       {
         name: 'Matagalpa',
         image: matagalpa,
-        description: 'Matagalpa'
+        description: 'summary matagalpa'
       }
     ]
   },
@@ -166,9 +166,9 @@ export const places = [
     destination: 'Esteli | Fabricas de Tabaco',
     places: [
       {
-        name: 'Esteli',
+        name: 'Fabrica de Tabaco Esteli',
         image: estieli_fabrica_tabaco,
-        description: 'Esteli'
+        description: 'summary frabica de tabaco esteli'
       }
     ]
   },
@@ -178,7 +178,7 @@ export const places = [
       {
         name: 'Laguna de Perlas',
         image: cayo_perlas2,
-        description: 'Laguna de Perlas'
+        description: 'summary laguna de perlas'
       }
       // {
       //   name: 'Laguna de Perlas',
@@ -193,7 +193,7 @@ export const places = [
       {
         name: 'Fabrica Ron Flor de Caña',
         image: chinandega_fabrica_flor_de_caña,
-        description: 'Chinandega'
+        description: 'summary ron flor de caña'
       }
     ]
   },
@@ -203,12 +203,12 @@ export const places = [
       {
         name: 'Corn Island',
         image: corn_island,
-        description: 'Corn Island'
+        description: 'summary corn island'
       },
       {
         name: 'Corn Island',
         image: corn_island2,
-        description: 'Corn Island'
+        description: 'summary corn island'
       }
     ]
   }
