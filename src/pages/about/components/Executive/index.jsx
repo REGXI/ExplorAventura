@@ -16,10 +16,10 @@ export function Executive({ t }) {
               <div className="executive-info__property__name">
                 <h3>Jacqueline A. Martinez</h3>
                 <div className="executive-info__property__name__social">
-                  <a href="https://www.facebook.com/jacqueline.martinez.31586">
+                  <a href="https://www.facebook.com/ExplorAventuraTravelNicaragua">
                     <i className="fab fa-facebook-f" />
                   </a>
-                  <a href="https://www.instagram.com/jacquelineamartinez/">
+                  <a href="https://www.instagram.com/exploraventura_travel/">
                     <i className="fab fa-instagram" />
                   </a>
                 </div>
@@ -44,10 +44,10 @@ export function Executive({ t }) {
               <div className="executive-info__property__name">
                 <h3>Winston A. Castillo</h3>
                 <div className="executive-info__property__name__social">
-                  <a href="https://www.facebook.com/winston.martinez.31586">
+                  <a href="https://www.facebook.com/ExplorAventuraTravelNicaragua">
                     <i className="fab fa-facebook-f" />
                   </a>
-                  <a href="https://www.instagram.com/winstonmartinez/">
+                  <a href="https://www.instagram.com/exploraventura_travel/">
                     <i className="fab fa-instagram" />
                   </a>
                 </div>

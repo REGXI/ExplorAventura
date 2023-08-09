@@ -9,7 +9,7 @@ export default function SocialMedia({ navigationColor }) {
         <span> (505) 2552 1603</span>
       </a>
       <a
-        href="https://www.facebook.com/ExplorAventura-Travel-101501368925201"
+        href="https://www.facebook.com/ExplorAventuraTravelNicaragua"
         target="_blank"
         rel="noreferrer"
         className="facebook"
@@ -17,7 +17,7 @@ export default function SocialMedia({ navigationColor }) {
         <i className="fa-brands fa-facebook" />
       </a>
       <a
-        href="https://www.instagram.com/exploraventura.travel/"
+        href="https://www.instagram.com/exploraventura_travel/"
         target="_blank"
         rel="noreferrer"
         className="instagram"

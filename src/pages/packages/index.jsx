@@ -43,7 +43,7 @@ const PackagesPage = () => {
 
   useEffect(() => {
     if (destination) {
-      setPlaces(getPlacesByDestination(destination))
+      setPlaces(getPlacesByDestination(destination.replace(/-/g, ' ')))
     }
   }, [destination])
 
