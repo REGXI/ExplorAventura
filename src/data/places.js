@@ -113,7 +113,7 @@ export const places = [
     ]
   },
   {
-    destination: 'Rivas / Isla de Ometepe',
+    destination: 'Rivas | Isla de Ometepe',
     places: [
       {
         name: 'Isla de Ometepe',
@@ -128,7 +128,7 @@ export const places = [
     ]
   },
   {
-    destination: 'San Juan del Sur / Playas',
+    destination: 'San Juan del Sur | Playas',
     places: [
       {
         name: 'San Juan del Sur',
@@ -138,7 +138,7 @@ export const places = [
     ]
   },
   {
-    destination: 'Masaya / Volcan Masaya',
+    destination: 'Masaya | Volcan Masaya',
     places: [
       {
         name: 'Volcán Masaya',
@@ -163,7 +163,7 @@ export const places = [
     ]
   },
   {
-    destination: 'Esteli / Fabricas de Tabaco',
+    destination: 'Esteli | Fabricas de Tabaco',
     places: [
       {
         name: 'Esteli',
@@ -173,7 +173,7 @@ export const places = [
     ]
   },
   {
-    destination: 'Laguna de Perlas / Cayos Perlas',
+    destination: 'Laguna de Perlas | Cayos Perlas',
     places: [
       {
         name: 'Laguna de Perlas',
@@ -188,7 +188,7 @@ export const places = [
     ]
   },
   {
-    destination: 'Chinandega / Fabrica Ron Flor de Caña',
+    destination: 'Chinandega | Fabrica Ron Flor de Caña',
     places: [
       {
         name: 'Fabrica Ron Flor de Caña',
@@ -198,7 +198,7 @@ export const places = [
     ]
   },
   {
-    destination: 'Corn Island / Little Corn Island',
+    destination: 'Corn Island | Little Corn Island',
     places: [
       {
         name: 'Corn Island',

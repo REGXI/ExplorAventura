@@ -1,30 +1,30 @@
 export const optionsPlaces = [
   { value: 'Managua', label: 'Managua' },
-  { value: 'Granada', label: 'Granada / Isletas' },
+  { value: 'Granada', label: 'Granada | Isletas' },
   { value: 'Leon', label: 'Leon' },
-  { value: 'Masaya / Volcan Masaya', label: 'Masaya / Volcan Masaya' },
+  { value: 'Masaya | Volcan Masaya', label: 'Masaya | Volcan Masaya' },
   { value: 'Matagalpa', label: 'Matagalpa' },
   {
-    value: 'Chinandega / Fabrica Ron Flor de Caña',
-    label: 'Chinandega / Fabrica Ron Flor de Caña'
+    value: 'Chinandega | Fabrica Ron Flor de Caña',
+    label: 'Chinandega | Fabrica Ron Flor de Caña'
   },
   {
-    value: 'Rivas / Isla de Ometepe',
-    label: 'Rivas / Isla de Ometepe'
+    value: 'Rivas | Isla de Ometepe',
+    label: 'Rivas | Isla de Ometepe'
   },
   {
-    value: 'Esteli / Fabricas de Tabaco',
-    label: 'Esteli / Fabricas de Tabaco'
+    value: 'Esteli | Fabricas de Tabaco',
+    label: 'Esteli | Fabricas de Tabaco'
   },
   {
-    value: 'Laguna de Perlas / Cayos Perlas',
-    label: 'Laguna de Perlas / Cayos Perlas'
+    value: 'Laguna de Perlas | Cayos Perlas',
+    label: 'Laguna de Perlas | Cayos Perlas'
   },
   {
-    value: 'Corn Island / Little Corn Island',
-    label: 'Corn Island / Little Corn Island'
+    value: 'Corn Island | Little Corn Island',
+    label: 'Corn Island | Little Corn Island'
   },
-  { value: 'San Juan del Sur / Playas', label: 'San Juan del Sur / Playas' }
+  { value: 'San Juan del Sur | Playas', label: 'San Juan del Sur | Playas' }
 ]
 
 /**
@@ -36,7 +36,7 @@ export const optionsPlaces = [
 -	Chinandega / Fabrica Ron Flor de Caña
 -	Esteli / Fabricas de Tabaco
 -	Rio San Juan / Solentiname
--	Corn Island / Little Corn Island
+-	Corn Island | Little Corn Island
 -	Laguna de Perlas / Cayos Perlas
 -	San Juan del Sur / Playas
  */
