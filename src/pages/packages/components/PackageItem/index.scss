@@ -1,0 +1,20 @@
+.packageContainer__package-item {
+  width: 100px;
+  height: 150px;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    cursor: pointer;
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  .package-item__title {
+  }
+}
