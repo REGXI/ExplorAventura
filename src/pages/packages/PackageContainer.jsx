@@ -2,6 +2,7 @@ import './packageContainer.scss'
 import { getPackageItems } from '../../data/packages'
 import { PackageItem } from './components/PackageItem'
 import { useEffect, useState } from 'react'
+import Accordion from '../../components/Accordion'
 import rightLargeIcon from '../../assets/svg/rightLarge.svg'
 
 export default function PackageContainer() {
@@ -64,11 +65,16 @@ export default function PackageContainer() {
         <div className="content_package-trajectory">
           <h3>Trajectory</h3>
           <div className="content_package-trajectory-focused__items">
-            {focusedPackage?.trajectory?.map((item) => (
-              <div className="content_package-trajectory-focused__item">
-                <h4>{item.title}</h4>
-                <span>{item.site}</span>
-              </div>
+            {focusedPackage?.trajectory?.map((item, index) => (
+              <Accordion
+                key={index}
+                title={item.title}
+                description={item.description}
+                site={item.site}
+                enableButton={true}
+                titleButton={'BOOK NOW'}
+                onClickedButton={() => console.log('clicked')}
+              />
             ))}
           </div>
         </div>
