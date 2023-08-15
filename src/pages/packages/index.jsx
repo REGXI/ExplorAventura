@@ -19,6 +19,7 @@ import {
 } from '../../store/features/searchPlaceSlice'
 import TransitionPage from '../transitonPage'
 import { notify } from '../../services/notification'
+import PackageContainer from './PackageContainer'
 
 const PackagesPage = () => {
   const { t } = useTranslation()
@@ -86,6 +87,10 @@ const PackagesPage = () => {
           <section className="package-container">
             <FocusedItemPlace focusedPlace={focusedPlace} />
           </section>
+        </section>
+
+        <section className="package">
+          <PackageContainer t={t} />
         </section>
 
         <section className="custom-packages">
