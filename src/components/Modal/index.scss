@@ -6,15 +6,16 @@
   justify-content: center;
   border-radius: 10px;
   color: #fff;
-  overflow: auto;
+  // overflow: auto;
 
   .close-modal {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -10%;
     margin: 1em;
     cursor: pointer;
     font-size: calc(0.6rem + 1vw);
+    mix-blend-mode: difference;
 
     &:hover {
       color: tomato;
