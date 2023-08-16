@@ -100,7 +100,7 @@ const PackagesPage = () => {
 
       <AnimatePresence initial={false} onExitComplete={handleCloseModal}>
         {isOpenModal && (
-          <Modal modalOpen={isOpenModal} handleClose={handleCloseModal}>
+          <Modal handleClose={handleCloseModal}>
             <CompleteInfoContact
               handleCloseModal={handleCloseModal}
               t={t}
