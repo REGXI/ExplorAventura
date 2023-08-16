@@ -8,6 +8,7 @@ export const CompleteInfoContact = ({
   t,
   handleCloseModal,
   searchPlaceState,
+  templateEmail = 'package',
   notify
 }) => {
   const initialValues = { name: '', email: '', phone: '' }
@@ -17,6 +18,11 @@ export const CompleteInfoContact = ({
   const handleSubmit = async (e) => {
     e.preventDefault()
 
+    if (!values.name || !values.email || !values.phone) {
+      notify({ type: 'error', message: t('Complete all fields') })
+      return
+    }
+
     notify({ type: 'info', message: t('Sending email...') })
 
     const newSearchPlaceState = {
@@ -25,7 +31,7 @@ export const CompleteInfoContact = ({
     }
 
     const response = await sendEmail(
-      'package',
+      templateEmail,
       converObjectToHtmlForm(newSearchPlaceState)
     )
 
