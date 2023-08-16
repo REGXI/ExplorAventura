@@ -1,0 +1,123 @@
+@use '../../../../scss/index' as *;
+
+.customized-package-content {
+  background-color: #fff;
+  color: #111;
+  padding: 2em;
+  max-width: 800px;
+  height: 90vh;
+
+  .renderer-sites {
+    display: flex;
+    margin-top: 2em;
+    .destination {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 0.5em;
+      }
+
+      select {
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+    }
+
+    .button-submit {
+      display: flex;
+      align-items: flex-end;
+      button {
+        margin-left: 3em;
+        display: inline-flex;
+        outline: none;
+        background: #09f;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 0.5em 1.3em;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        cursor: pointer;
+
+        &:hover {
+          background: #0af;
+        }
+
+        &:active {
+          background: #09f;
+        }
+      }
+    }
+  }
+
+  .sites-selected {
+    margin-top: 2em;
+
+    ul {
+      height: 200px;
+      margin-bottom: 1em;
+      overflow: auto;
+
+      li {
+        list-style: none;
+        padding: 1em;
+        background-color: rgb(227, 229, 229, 0.3);
+
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+          color: tomato;
+          border-radius: 50%;
+          &:hover {
+            background-color: rgb(204, 204, 204, 0.3);
+          }
+
+          &:active {
+            background-color: rgb(204, 204, 204, 0.3);
+          }
+        }
+      }
+
+      .colored {
+        background-color: rgb(204, 204, 204, 0.3);
+      }
+    }
+  }
+
+  .complete-info {
+    width: 100%;
+
+    button {
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.5em 1.3em;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .info {
+      background-color: $pri-color;
+      margin-right: 2em;
+    }
+
+    .cancel {
+      background-color: tomato;
+    }
+  }
+}
