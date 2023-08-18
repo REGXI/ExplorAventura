@@ -5,19 +5,15 @@ import Chevron from './chevron.svg'
 export default function Accordion({
   site,
   title,
+  subtitle,
   description,
   enableButton = false,
   onClickedButton,
   titleButton
 }) {
   const [toggle, setToggle] = useState(false)
-  const [heightEl, setHeightEl] = useState()
 
   const refHeight = useRef()
-
-  useEffect(() => {
-    setHeightEl(`${refHeight.current.scrollHeight}px`)
-  }, [])
 
   const toggleState = () => setToggle(!toggle)
 
@@ -33,9 +29,9 @@ export default function Accordion({
 
       <div
         className={toggle ? 'accordion-toggle animated' : 'accordion-toggle'}
-        style={{ height: toggle ? heightEl : '0px' }}
         ref={refHeight}
       >
+        <small>{subtitle}</small>
         <p aria-hidden={toggle ? 'true' : 'false'}>{description}</p>
 
         {enableButton && (
