@@ -69,6 +69,7 @@ export default function PackageContainer() {
               <Accordion
                 key={index}
                 title={item.title}
+                subtitle={item.route}
                 description={item.description}
                 site={item.site}
                 enableButton={true}
