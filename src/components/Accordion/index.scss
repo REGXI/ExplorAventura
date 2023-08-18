@@ -42,17 +42,21 @@
 .accordion-toggle {
   font-size: 18px;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, height 0.3s 0.3s ease-in-out;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .animated {
   opacity: 1;
   transition: height 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out;
+  height: auto !important;
 }
 
 .accordion-toggle p {
   padding: 1em;
   pointer-events: none;
+  line-height: 1.6;
 }
 
 .accordion-button {
