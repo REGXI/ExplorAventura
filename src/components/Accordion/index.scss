@@ -3,7 +3,6 @@
 .accordion {
   border-radius: 3px;
   background-color: rgb(241, 241, 241, 0.4);
-
   margin-bottom: 1em;
 }
 
@@ -16,7 +15,7 @@
   background: none;
   outline: none;
   border: 0;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #e3e5e5;
   padding: 0.5em;
 
   &:hover {
