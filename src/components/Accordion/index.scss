@@ -39,21 +39,28 @@
 }
 
 .accordion-toggle {
-  font-size: 18px;
   opacity: 0;
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  small {
+    font-size: 14px;
+    color: #666;
+  }
 }
 
 .animated {
   opacity: 1;
   transition: height 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out;
   height: auto !important;
+  padding: 1em;
 }
 
 .accordion-toggle p {
-  padding: 1em;
   pointer-events: none;
   line-height: 1.6;
 }
