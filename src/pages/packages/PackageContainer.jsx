@@ -73,10 +73,10 @@ export default function PackageContainer() {
                 key={index}
                 title={t(item.title) + ' ' + (index + 1)}
                 subtitle={t(item.route)}
-                description={item.description}
+                description={t(item.description)}
                 site={t(item.site)}
                 enableButton={true}
-                titleButton={t('contact agent')}
+                titleButton={t('View site')}
                 onClickedButton={() => setFocusedPackageTrajectory(item)}
               />
             ))}
