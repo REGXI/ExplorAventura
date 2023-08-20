@@ -20,10 +20,23 @@ export const CustomizedPackageContent = ({ t, handleClose }) => {
     const place = e.target.destination.value
 
     if (sitesSelected.includes(place)) {
-      return notify('warn', 'This place is already selected')
+      return notify({
+        type: 'warn',
+        message: t('This place is already selected')
+      })
     }
 
     setSitesSelected([...sitesSelected, place])
+  }
+
+  const handleCompleteInfo = () => {
+    if (sitesSelected.length <= 0) {
+      return notify({
+        type: 'warn',
+        message: t('You must select a place')
+      })
+    }
+    handleOpenModal()
   }
 
   const deleteSiteSelected = (site) => {
@@ -36,10 +49,9 @@ export const CustomizedPackageContent = ({ t, handleClose }) => {
       <div className="customized-package-content">
         <div className="description">
           <p>
-            Customize your package and discover the charming Islets of Granada!
-            We are looking forward to receiving your request and we will reply
-            to you as soon as possible. Get ready for an unforgettable adventure
-            together!
+            {t(
+              'Customize your adventure package and discover the wonders of Nicaragua at your own pace, visiting the places you want! We look forward to receiving your request and we will respond as soon as possible. Get ready for an unforgettable adventure together!'
+            )}
           </p>
         </div>
 
@@ -61,7 +73,7 @@ export const CustomizedPackageContent = ({ t, handleClose }) => {
           </div>
 
           <div className="button-submit">
-            <button>
+            <button type="submit">
               <i className="fas fa-plus"></i>
               {t('Add')}
             </button>
@@ -87,7 +99,7 @@ export const CustomizedPackageContent = ({ t, handleClose }) => {
         </div>
 
         <div className="complete-info">
-          <button className="info" onClick={handleOpenModal}>
+          <button className="info" onClick={handleCompleteInfo}>
             {t('Complete info')}
           </button>
 
@@ -103,8 +115,16 @@ export const CustomizedPackageContent = ({ t, handleClose }) => {
             <CompleteInfoContact
               handleCloseModal={handleCloseModal}
               t={t}
-              searchPlaceState={setSitesSelected}
+              searchPlaceState={
+                sitesSelected.length > 0
+                  ? {
+                      message: sitesSelected.join(', '),
+                      interested: 'Personalizado'
+                    }
+                  : {}
+              }
               notify={notify}
+              templateEmail="contact"
             />
           </Modal>
         )}
