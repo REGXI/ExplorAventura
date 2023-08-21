@@ -5,26 +5,40 @@ import { Values } from './components/Value'
 // import { TimeLine } from './components/TimeLine'
 import { Executive } from './components/Executive'
 import { useDispatch } from 'react-redux'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
-import AboutImage from '../../assets/images/about-image.webp'
+import abuot_page1 from '../../assets/images/abuot_page1.webp'
+import abuot_page2 from '../../assets/images/abuot_page2.webp'
+import abuot_page3 from '../../assets/images/abuot_page3.webp'
+import abuot_page4 from '../../assets/images/abuot_page4.webp'
 import TransitionPage from '../transitonPage'
 
 const AboutPage = () => {
   const { t } = useTranslation()
   const dispatch = useDispatch()
+  const [aboutImages, setAboutImages] = useState(abuot_page1)
 
   useEffect(() => {
     dispatch(selectNavigationColor('light'))
   }, [dispatch])
 
+  useEffect(() => {
+    const images = [abuot_page1, abuot_page2, abuot_page3, abuot_page4]
+    const image = images[Math.floor(Math.random() * images.length)]
+    setAboutImages(image)
+  }, [])
+
   return (
     <div className="about-page">
       <section className="values">
-        <img src={AboutImage} alt="" className="background-about-page" />
+        <img
+          src={aboutImages}
+          alt="ExplorAventura information"
+          className="background-about-page"
+        />
         <Values valuesData={valuesData} t={t} />
       </section>
-      <div className="time-line">{/* <TimeLine t={t} /> */}</div>
+      {/* <div className="time-line"><TimeLine t={t} /></div> */}
 
       <section className="executive">
         <Executive t={t} />
