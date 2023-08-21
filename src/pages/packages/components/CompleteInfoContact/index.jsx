@@ -3,13 +3,13 @@ import {
   converObjectToHtmlForm,
   sendEmail
 } from '../../../../services/sendEmail'
+import { notify } from '../../../../services/notification'
 import './index.scss'
 export const CompleteInfoContact = ({
   t,
   handleCloseModal,
   searchPlaceState,
-  templateEmail = 'package',
-  notify
+  templateEmail = 'package'
 }) => {
   const initialValues = { name: '', email: '', phone: '' }
 
