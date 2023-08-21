@@ -68,6 +68,7 @@
         color: #fff;
         padding: 1em 1.7em;
         font-weight: bold;
+        text-transform: up;
 
         &:hover {
           cursor: pointer;
@@ -149,4 +150,44 @@
 }
 
 @include mobile {
+  .packageContainer {
+    flex-direction: column;
+    height: auto;
+    gap: 4em;
+
+    &__descriptions-fields {
+      .packageContainer__title {
+        h2 {
+          .fixed-span {
+            width: 100%;
+          }
+          .iconRight {
+            position: relative;
+            img {
+              width: 8em;
+              transform: rotate(90deg);
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+      .packageContainer__description {
+        text-align: center;
+      }
+    }
+
+    &__packages {
+      text-align: center;
+
+      .content_package-trajectory {
+        text-align: start;
+
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
 }
