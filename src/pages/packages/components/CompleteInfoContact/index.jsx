@@ -23,7 +23,7 @@ export const CompleteInfoContact = ({
       return
     }
 
-    notify({ type: 'info', message: t('Sending email...') })
+    notify({ type: 'info', message: t('Sending email') })
 
     const newSearchPlaceState = {
       ...searchPlaceState,
