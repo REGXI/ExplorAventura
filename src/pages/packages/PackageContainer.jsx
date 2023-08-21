@@ -27,7 +27,10 @@ export default function PackageContainer() {
     setFocusedPackageTrajectory(getPackageItems()[0].trajectory[0])
   }, [])
 
-  const handleClickPackage = (item) => setFocusedPackage(item)
+  const handleClickPackage = (item) => {
+    setFocusedPackage(item)
+    setFocusedPackageTrajectory(item)
+  }
 
   const handleClickViewSiteItem = (item) => {
     setFocusedPackageTrajectory(item)
