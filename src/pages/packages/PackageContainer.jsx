@@ -1,7 +1,7 @@
 import './packageContainer.scss'
 import { getPackageItems } from '../../data/packages'
 import { PackageItem } from './components/PackageItem'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Accordion from '../../components/Accordion'
 import rightLargeIcon from '../../assets/svg/rightLarge.svg'
 import { useTranslation } from 'react-i18next'
@@ -13,6 +13,7 @@ export default function PackageContainer() {
   const [packagItems, setPakageItems] = useState()
   const [focusedPackage, setFocusedPackage] = useState()
   const [focusedPackageTrajectory, setFocusedPackageTrajectory] = useState()
+  const pacakageImageFocus = useRef()
 
   useEffect(() => {
     setPakageItems(getPackageItems())
@@ -21,6 +22,15 @@ export default function PackageContainer() {
   }, [])
 
   const handleClickPackage = (item) => setFocusedPackage(item)
+
+  const handleClickViewSiteItem = (item) => {
+    setFocusedPackageTrajectory(item)
+
+    pacakageImageFocus.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    })
+  }
 
   return (
     <div className="packageContainer">
@@ -47,7 +57,11 @@ export default function PackageContainer() {
       </section>
       <section className="packageContainer__focused-package">
         <div className="packageContainer__focused-package__image">
-          <img src={focusedPackageTrajectory?.image} alt="package" />
+          <img
+            src={focusedPackageTrajectory?.image}
+            alt="package"
+            ref={pacakageImageFocus}
+          />
           <h3>{focusedPackageTrajectory?.site}</h3>
         </div>
       </section>
@@ -77,7 +91,7 @@ export default function PackageContainer() {
                 site={t(item.site)}
                 enableButton={true}
                 titleButton={t('View site')}
-                onClickedButton={() => setFocusedPackageTrajectory(item)}
+                onClickedButton={() => handleClickViewSiteItem(item)}
               />
             ))}
           </div>
