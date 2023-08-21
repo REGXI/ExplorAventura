@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import Accordion from '../../components/Accordion'
 import rightLargeIcon from '../../assets/svg/rightLarge.svg'
 import { useTranslation } from 'react-i18next'
+import Carousel from '../../components/Carousel'
 
 export default function PackageContainer() {
   const { t } = useTranslation()
@@ -54,14 +55,13 @@ export default function PackageContainer() {
         <div className="content_package">
           <h3>{t('Other Packages')}</h3>
           <div className="content_package__items">
-            {packagItems?.map((item) => (
-              <PackageItem
-                key={item.id}
-                title={item.title}
-                image={item.image}
-                onClick={() => handleClickPackage(item)}
+            {
+              <Carousel
+                arrayCarousel={packagItems}
+                RenderComponent={PackageItem}
+                onClickedItem={handleClickPackage}
               />
-            ))}
+            }
           </div>
         </div>
 
