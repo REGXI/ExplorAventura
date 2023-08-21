@@ -123,7 +123,6 @@ export const CustomizedPackageContent = ({ t, handleClose }) => {
                     }
                   : {}
               }
-              notify={notify}
               templateEmail="contact"
             />
           </Modal>

@@ -105,7 +105,6 @@ const PackagesPage = () => {
               handleCloseModal={handleCloseModal}
               t={t}
               searchPlaceState={searchPlaceState}
-              notify={notify}
             />
           </Modal>
         )}
