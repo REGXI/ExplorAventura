@@ -4,6 +4,7 @@ import { valuesData } from '../../data/valuesData'
 import { Values } from './components/Value'
 // import { TimeLine } from './components/TimeLine'
 import { Executive } from './components/Executive'
+import { Safetravel } from './components/SafeTravel'
 import { useDispatch } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { selectNavigationColor } from '../../store/features/navigationColorSlice'
@@ -11,6 +12,7 @@ import abuot_page1 from '../../assets/images/abuot_page1.webp'
 import abuot_page2 from '../../assets/images/abuot_page2.webp'
 import abuot_page3 from '../../assets/images/abuot_page3.webp'
 import abuot_page4 from '../../assets/images/abuot_page4.webp'
+
 import TransitionPage from '../transitonPage'
 
 const AboutPage = () => {
@@ -42,6 +44,10 @@ const AboutPage = () => {
 
       <section className="executive">
         <Executive t={t} />
+      </section>
+
+      <section className="safe-travel">
+        <Safetravel t={t} />
       </section>
     </div>
   )
